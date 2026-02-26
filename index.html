@@ -1,215 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estudio Jurídico Gigena & Fernandez</title>
+<title>Estudio Jurídico Gigena Fernández & Asoc.</title>
 
 <style>
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
-
 margin:0;
-font-family:Arial;
-background:#1e1e1e;
+font-family: Arial, sans-serif;
+background-color:#0a0a0a;
 color:white;
-
 }
-
-/* MENU */
 
 header{
-
-background:#2b1b1b;
+background-color:#3b0d0d;
 padding:15px;
+text-align:center;
 position:fixed;
 width:100%;
 top:0;
-z-index:999;
-text-align:center;
-
+z-index:1000;
 }
 
 header a{
-
-color:#d4af37;
+color:white;
 margin:15px;
 text-decoration:none;
 font-weight:bold;
-font-size:16px;
-
 }
-
-/* PORTADA */
 
 .hero{
 
-height:100vh;
-
-background:
-
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-
-url("https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg");
+background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
 
 background-size:cover;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
+background-position:center;
+padding-top:140px;
+padding-bottom:100px;
 text-align:center;
-
-padding:20px;
-
 }
 
 .logo{
 
 width:160px;
-
 border-radius:50%;
-
-border:4px solid #d4af37;
-
-background:white;
-
-padding:10px;
+border:4px solid #c6a55c;
+margin-bottom:20px;
 
 }
 
 h1{
 
-font-size:40px;
-margin:20px;
-
-}
-
-.hero p{
-
-color:#d4af37;
-font-size:22px;
+font-size:32px;
 
 }
 
 .sub{
 
-color:white;
-font-size:18px;
+color:#c6a55c;
+font-size:20px;
 margin-top:10px;
 
 }
 
-/* BOTON */
+.texto{
+
+max-width:700px;
+margin:auto;
+padding:20px;
+
+}
 
 .boton{
 
-background:#d4af37;
-
+background-color:#c6a55c;
 color:black;
-
-padding:15px 35px;
-
-margin-top:25px;
-
-display:inline-block;
-
+padding:15px;
 text-decoration:none;
-
-border-radius:8px;
-
+display:inline-block;
+margin-top:20px;
 font-weight:bold;
-
-font-size:18px;
-
-}
-
-/* SECCIONES */
-
-section{
-
-padding:80px 20px;
-
-text-align:center;
+border-radius:6px;
 
 }
 
-.titulo{
+.seccion{
 
-color:#d4af37;
-
-font-size:30px;
-
-margin-bottom:20px;
+padding:40px;
+background-color:#111;
 
 }
 
-/* SERVICIOS */
+h2{
 
-.servicios{
-
-max-width:600px;
-
-margin:auto;
-
-line-height:35px;
-
-font-size:18px;
+color:#c6a55c;
 
 }
-
-/* CONTACTO */
-
-.contacto{
-
-font-size:20px;
-line-height:35px;
-
-}
-
-/* FOOTER */
 
 footer{
 
-background:#2b1b1b;
-
+background-color:#3b0d0d;
 padding:20px;
-
-color:#d4af37;
-
-}
-
-/* BOTON FLOTANTE */
-
-.whatsapp{
-
-position:fixed;
-
-bottom:20px;
-
-right:20px;
-
-background:#25D366;
-
-color:white;
-
-padding:18px;
-
-border-radius:50%;
-
-font-size:25px;
-
-text-decoration:none;
+text-align:center;
 
 }
 
@@ -223,147 +118,121 @@ text-decoration:none;
 <header>
 
 <a href="#">Inicio</a>
-
-<a href="#nosotros">Nosotros</a>
-
-<a href="#servicios">Servicios</a>
-
-<a href="#contacto">Contacto</a>
+<a href="#">Equipo</a>
+<a href="#">Servicios</a>
+<a href="#">Contacto</a>
 
 </header>
 
 
-<div class="hero">
+<section class="hero">
 
 <img src="LOGO.png" class="logo">
 
-<h1>Estudio Jurídico Gigena & Fernandez</h1>
-
-<p>Soluciones legales integrales</p>
+<h1>ESTUDIO JURÍDICO GIGENA FERNÁNDEZ & ASOC.</h1>
 
 <div class="sub">
+ASESORÍA JURÍDICA INTEGRAL
+</div>
 
-Atención presencial en La Plata<br>
+<div class="texto">
 
-Atención virtual en toda la Provincia de Buenos Aires
+Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales.  
+Brindamos soluciones estratégicas basadas en la confianza y el profesionalismo.
 
 </div>
 
-<a href="https://wa.me/5492216261845" class="boton">
+<a class="boton"
+href="https://wa.me/5492216261845">
 
-Contactar por WhatsApp
+AGENDAR CONSULTA
 
 </a>
 
-</div>
+</section>
 
 
-<section id="nosotros">
 
-<div class="titulo">Quiénes Somos</div>
+<section class="seccion">
 
-<p>
-
-Brindamos asesoramiento jurídico integral, con atención personalizada,
-
-confidencialidad y compromiso profesional.
-
-Nuestro objetivo es defender los derechos de nuestros clientes
-
-y ofrecer soluciones legales eficaces.
-
-</p>
+<h2>Nuestro Equipo</h2>
 
 <p>
 
-Atendemos de manera presencial en la ciudad de La Plata
+Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdisciplinario de abogados asociados comprometidos con la excelencia.
 
-y también brindamos atención virtual en toda la Provincia de Buenos Aires,
-
-facilitando el acceso a nuestros servicios sin importar la ubicación.
+Nuestra firma nace con el objetivo de brindar un respaldo legal sólido, combinando experiencia individual y una visión estratégica colectiva para cada caso.
 
 </p>
 
 </section>
 
 
-<section id="servicios">
 
-<div class="titulo">Áreas de práctica</div>
+<section class="seccion">
 
-<div class="servicios">
-
-Derecho de Familia<br>
-
-Derecho Laboral<br>
-
-Derecho Sucesorio<br>
-
-Derecho Comercial<br>
-
-Concursos y Quiebras<br>
-
-Accidentes de Tránsito
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="titulo">Por qué elegirnos</div>
+<h2>Áreas de Práctica</h2>
 
 <p>
 
-Atención personalizada<br>
-
-Compromiso profesional<br>
-
-Confianza y seriedad<br>
-
-Respuestas rápidas<br>
-
-Atención presencial y virtual
+• Derecho de Familia  
+• Derecho Sucesorio  
+• Derecho Laboral  
+• Accidentes de Tránsito  
+• Derecho Comercial  
+• Concursos y Quiebras  
+• Derecho Previsional  
 
 </p>
 
 </section>
 
 
-<section id="contacto">
 
-<div class="titulo">Contacto</div>
+<section class="seccion">
 
-<div class="contacto">
+<h2>Contacto</h2>
 
-WhatsApp: 221-626-1845<br>
+<p>
 
-Atención presencial en La Plata<br>
+📍 Atención Presencial: La Plata y San Miguel del Monte  
 
-Atención virtual en toda la Provincia de Buenos Aires
+💻 Atención Virtual: Toda la Provincia de Buenos Aires  
 
-</div>
+📱 WhatsApp: 221 6261845  
+
+⏰ Lunes a Viernes de 9 a 18 hs  
+
+</p>
+
+<a class="boton"
+href="https://wa.me/5492216261845">
+
+CONTACTAR
+
+</a>
 
 </section>
+
 
 
 <footer>
 
-© 2026 Estudio Jurídico Gigena & Fernandez<br>
+Estudio Jurídico Gigena Fernández & Asoc.
 
-La Plata - Buenos Aires - Argentina
+<br><br>
+
+"Porque hay un solo Dios, y un solo mediador entre Dios y los hombres, Jesucristo hombre."
+
+<br>
+
+1 Timoteo 2:5
 
 </footer>
 
 
-<a href="https://wa.me/5492216261845" class="whatsapp">
-
-✓
-
-</a>
-
-
 </body>
-
 </html>
+
+
+

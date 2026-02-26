@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estudio Jurídico Gigena Fernández y Asociados</title>
+<title>Estudio Jurídico Gigena Fernández & Asociados</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
@@ -16,6 +16,11 @@ background:black;
 color:white;
 font-family:Montserrat;
 overflow-x:hidden;
+}
+
+a{
+color:white;
+text-decoration:none;
 }
 
 /* HEADER */
@@ -32,10 +37,7 @@ box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
 header a{
-color:white;
 margin:15px;
-text-decoration:none;
-font-size:16px;
 transition:0.4s;
 }
 
@@ -43,8 +45,7 @@ header a:hover{
 color:#d4af37;
 }
 
-
-/* HERO PARALLAX */
+/* HERO */
 
 .hero{
 
@@ -56,7 +57,6 @@ url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
 
 background-size:cover;
 background-position:center;
-
 background-attachment:fixed;
 
 display:flex;
@@ -64,81 +64,46 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
-
-animation:fadeIn 2s;
 
 }
-
-@keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
-}
-
 
 h1{
 font-family:Playfair Display;
 font-size:42px;
-text-shadow:0 0 20px rgba(0,0,0,0.8);
 }
 
 h2{
 color:#d4af37;
-font-weight:300;
 }
-
-p{
-max-width:700px;
-}
-
 
 /* BOTON */
 
 .btn{
 
-margin-top:15px;
+margin-top:20px;
 padding:15px 30px;
 border:none;
 font-size:16px;
 cursor:pointer;
 border-radius:5px;
 
-}
-
-.gold{
-
 background:linear-gradient(45deg,#d4af37,#f1d47a);
 color:black;
-box-shadow:0 0 20px rgba(212,175,55,0.5);
-
-transition:0.4s;
 
 }
 
-.gold:hover{
+/* FOTO DOCTOR */
 
-transform:scale(1.05);
+.foto{
 
-}
-
-
-/* WHATSAPP */
-
-.whatsapp{
-
-background:#25D366;
-color:white;
-position:fixed;
-bottom:20px;
-right:20px;
-padding:18px;
+width:160px;
+height:160px;
 border-radius:50%;
-font-size:20px;
-text-decoration:none;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
+object-fit:cover;
+margin-top:20px;
+box-shadow:0 0 30px rgba(212,175,55,0.5);
 
 }
-
 
 /* SECCIONES */
 
@@ -149,8 +114,7 @@ text-align:center;
 
 }
 
-
-/* TARJETAS PREMIUM */
+/* CARD */
 
 .card{
 
@@ -163,28 +127,51 @@ padding:25px;
 
 border-radius:10px;
 
-max-width:600px;
+max-width:700px;
 
-box-shadow:0 0 30px rgba(0,0,0,0.6);
-
-transition:0.4s;
+cursor:pointer;
 
 }
 
-.card:hover{
+/* INFO OCULTA */
 
-transform:translateY(-5px);
+.info{
+
+max-height:0;
+overflow:hidden;
+transition:0.5s;
+margin-top:10px;
+color:#ccc;
 
 }
 
+.card.active .info{
 
-/* SCROLL ANIMATION */
+max-height:500px;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+background:#25D366;
+position:fixed;
+bottom:20px;
+right:20px;
+padding:18px;
+border-radius:50%;
+font-size:20px;
+
+}
+
+/* SCROLL */
 
 .fade{
 
 opacity:0;
 transform:translateY(30px);
-transition:1.5s;
+transition:1s;
 
 }
 
@@ -215,37 +202,24 @@ transform:translateY(0);
 
 <section class="hero">
 
-
 <h1>
 
 ESTUDIO JURÍDICO<br>
 GIGENA FERNÁNDEZ<br>
-y Asociados
+& ASOCIADOS
 
 </h1>
 
-
 <h2>ASESORÍA JURÍDICA INTEGRAL</h2>
 
-
-<p>
-
-Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales.
-
-</p>
-
-
-<button class="btn gold"
-
+<button class="btn"
 onclick="window.location.href='https://wa.me/5492216261845'">
 
 AGENDAR CONSULTA
 
 </button>
 
-
 </section>
-
 
 
 
@@ -253,14 +227,17 @@ AGENDAR CONSULTA
 
 <h2>Nuestro Equipo</h2>
 
+<img src="maximiliano.jpg" class="foto">
+
 <div class="card">
 
-Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdisciplinario de abogados asociados comprometidos con la excelencia.
+Dr. Maximiliano Gigena<br>
+
+Director del Estudio
 
 </div>
 
 </section>
-
 
 
 
@@ -268,56 +245,127 @@ Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdiscip
 
 <h2>Áreas de Práctica</h2>
 
-<div class="card">⚖ Derecho de Familia</div>
 
-<div class="card">🏛 Sucesiones</div>
+<div class="card" onclick="toggle(this)">
 
-<div class="card">💼 Derecho Laboral</div>
+⚖ Derecho de Familia
 
-<div class="card">🚗 Accidentes de Tránsito</div>
+<div class="info">
 
-<div class="card">⚖ Derecho Comercial</div>
+Acompañamos divorcios, cuota alimentaria, adopciones y régimen de visitas.
 
-<div class="card">👴 Derecho Previsional</div>
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="toggle(this)">
+
+🏛 Sucesiones
+
+<div class="info">
+
+Gestionamos herencias y declaratorias de herederos.
+
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="toggle(this)">
+
+💼 Derecho Laboral
+
+<div class="info">
+
+Despidos, trabajo en negro y accidentes laborales.
+
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="toggle(this)">
+
+🚗 Accidentes
+
+<div class="info">
+
+Reclamos contra aseguradoras.
+
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="toggle(this)">
+
+⚖ Derecho Comercial
+
+<div class="info">
+
+Contratos y asesoramiento empresarial.
+
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="toggle(this)">
+
+👴 Derecho Previsional
+
+<div class="info">
+
+Jubilaciones y pensiones.
+
+</div>
+
+</div>
+
+
+
+<div class="card" onclick="toggle(this)">
+
+🏥 Amparos de Salud
+
+<div class="info">
+
+Amparos contra obras sociales.
+
+</div>
+
+</div>
+
 
 </section>
-
 
 
 
 <section id="opiniones" class="section fade">
 
-<h2>Opiniones de Clientes</h2>
+<h2>Opiniones</h2>
 
 <div class="card">
 
-"Excelente atención y profesionalismo."<br><br>
-
-— Cliente
+⭐⭐⭐⭐⭐<br>
+Excelente atención.
 
 </div>
 
-
 <div class="card">
 
-"Me resolvieron el problema rápido y con mucha claridad."<br><br>
-
-— Cliente
-
-</div>
-
-
-<div class="card">
-
-"Total confianza desde el primer momento."<br><br>
-
-— Cliente
+⭐⭐⭐⭐⭐<br>
+Muy profesionales.
 
 </div>
 
 </section>
-
-
 
 
 
@@ -325,17 +373,9 @@ Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdiscip
 
 <h2>Contacto</h2>
 
-
 <div class="card">
 
 📍 La Plata y San Miguel del Monte
-
-</div>
-
-
-<div class="card">
-
-💻 Virtual en toda la Provincia de Buenos Aires
 
 </div>
 
@@ -359,30 +399,14 @@ Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdiscip
 
 <a href="https://instagram.com/estudiojuridico.gjf">
 
-@EstudioJuridico.GJF
+@estudiojuridico.gjf
 
 </a>
 
 </div>
 
 
-
-<div class="card">
-
-<iframe
-
-src="https://maps.google.com/maps?q=la%20plata&t=&z=13&ie=UTF8&iwloc=&output=embed"
-
-width="100%"
-
-height="250">
-
-</iframe>
-
-</div>
-
 </section>
-
 
 
 
@@ -415,15 +439,20 @@ class="whatsapp">
 
 <script>
 
+function toggle(el){
+
+el.classList.toggle("active");
+
+}
+
+
 const faders=document.querySelectorAll('.fade');
 
 window.addEventListener('scroll',()=>{
 
 faders.forEach(el=>{
 
-const top=el.getBoundingClientRect().top;
-
-if(top<window.innerHeight){
+if(el.getBoundingClientRect().top<window.innerHeight){
 
 el.classList.add('show');
 
@@ -434,6 +463,7 @@ el.classList.add('show');
 });
 
 </script>
+
 
 
 </body>

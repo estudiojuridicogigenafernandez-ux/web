@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,44 +7,50 @@
 
 <title>Estudio Jurídico Gigena Fernández & Asoc.</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
-
 margin:0;
+font-family:Montserrat;
 background:black;
 color:white;
-font-family:Montserrat;
-
 }
 
-/* NAVBAR PREMIUM */
+
+/* NAV */
 
 nav{
 
-position:fixed;
-width:100%;
 background:rgba(90,15,15,0.95);
+
 padding:18px;
+
 text-align:center;
+
+position:fixed;
+
+width:100%;
+
 z-index:999;
+
+backdrop-filter:blur(10px);
 
 }
 
 nav a{
 
 color:white;
-margin:20px;
+
+margin:15px;
+
 text-decoration:none;
-font-weight:600;
+
+font-weight:500;
 
 }
+
 
 /* HERO */
 
@@ -53,37 +58,33 @@ font-weight:600;
 
 height:100vh;
 
-background:
-
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
-
-background-size:cover;
-background-position:center;
-
 display:flex;
+
 flex-direction:column;
+
 justify-content:center;
+
 align-items:center;
 
 text-align:center;
 
-animation:fade 2s;
+background:
 
-}
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.85)),
 
+url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
 
-@keyframes fade{
+background-size:cover;
 
-from{opacity:0}
-to{opacity:1}
+background-position:center;
 
 }
 
 
 .logo{
 
-width:160px;
+width:140px;
+
 margin-bottom:20px;
 
 }
@@ -92,30 +93,57 @@ margin-bottom:20px;
 h1{
 
 font-family:Playfair Display;
-font-size:45px;
+
+font-size:55px;
+
+margin:0;
 
 }
 
 
-.dorado{
+.sub{
 
 color:#d4af37;
-font-size:24px;
+
+font-size:22px;
+
+margin-top:15px;
+
+}
+
+
+.desc{
+
+max-width:700px;
+
+margin-top:20px;
+
+font-size:18px;
+
+opacity:0.9;
 
 }
 
 
 .btn{
 
+margin-top:30px;
+
 padding:15px 35px;
-margin:10px;
-border-radius:8px;
+
+background:#d4af37;
+
+color:black;
+
 text-decoration:none;
-font-weight:600;
+
+border-radius:8px;
+
+font-weight:bold;
+
 transition:0.3s;
 
 }
-
 
 .btn:hover{
 
@@ -124,107 +152,64 @@ transform:scale(1.05);
 }
 
 
-.wsp{
-
-background:#25D366;
-color:white;
-
-}
-
-
-.turno{
-
-background:#d4af37;
-color:black;
-
-}
-
-
-/* SECCIONES */
+/* SECTIONS */
 
 section{
 
 padding:80px 20px;
+
 max-width:1000px;
+
 margin:auto;
-
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-
-}
-
-section.visible{
-
-opacity:1;
-transform:translateY(0);
 
 }
 
 
 h2{
 
+font-family:Playfair Display;
+
 color:#d4af37;
 
 }
 
 
-/* CARDS */
+/* TARJETAS */
 
 .card{
 
 background:rgba(255,255,255,0.05);
+
+padding:25px;
+
+margin-top:20px;
+
+border-radius:10px;
+
 backdrop-filter:blur(10px);
 
-padding:20px;
-margin:20px;
+transition:0.4s;
 
-border-left:3px solid #d4af37;
+}
+
+.card:hover{
+
+transform:translateY(-5px);
 
 }
 
 
-/* CONTACTO */
+/* WHATSAPP FLOAT */
 
-.contact{
-
-background:#5a0f0f;
-
-}
-
-
-/* MAPA */
-
-iframe{
-
-width:100%;
-height:300px;
-border:0;
-
-}
-
-
-/* FOOTER */
-
-footer{
-
-background:#5a0f0f;
-padding:30px;
-text-align:center;
-
-}
-
-
-/* BOTON FLOTANTE WHATSAPP */
-
-.float{
+.wsp{
 
 position:fixed;
+
 bottom:25px;
+
 right:25px;
 
 background:#25D366;
-color:white;
 
 padding:18px;
 
@@ -232,12 +217,24 @@ border-radius:50%;
 
 font-size:22px;
 
-text-decoration:none;
+color:white;
 
-box-shadow:0 0 15px black;
+text-decoration:none;
 
 }
 
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+background:#3a0d0d;
+
+margin-top:40px;
+
+}
 
 </style>
 
@@ -247,12 +244,14 @@ box-shadow:0 0 15px black;
 <body>
 
 
-
 <nav>
 
 <a href="#">Inicio</a>
+
 <a href="#equipo">Equipo</a>
-<a href="#areas">Servicios</a>
+
+<a href="#areas">Áreas</a>
+
 <a href="#contacto">Contacto</a>
 
 </nav>
@@ -261,66 +260,62 @@ box-shadow:0 0 15px black;
 
 <section class="hero">
 
+
 <img src="logo.png" class="logo">
 
 
 <h1>
 
 ESTUDIO JURÍDICO<br>
+
 GIGENA FERNÁNDEZ & ASOC.
 
 </h1>
 
 
-<p class="dorado">
+<div class="sub">
 
 ASESORÍA JURÍDICA INTEGRAL
 
-</p>
+</div>
 
 
-<p>
+<div class="desc">
 
 Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales.
+
 Brindamos soluciones estratégicas basadas en la confianza y el profesionalismo.
 
-</p>
+</div>
 
 
-<a href="https://wa.me/5492216261845" class="btn turno">
+<a href="https://wa.me/5492216261845" class="btn">
 
 AGENDAR CONSULTA
 
 </a>
 
 
-<a href="https://wa.me/5492216261845" class="btn wsp">
-
-CONTACTAR
-
-</a>
-
-
-
 </section>
-
 
 
 
 <section id="equipo">
 
+
 <h2>Nuestro Equipo</h2>
 
-<p>
+
+<div class="card">
 
 Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdisciplinario de abogados asociados comprometidos con la excelencia.
 
-Nuestra firma nace con el objetivo de brindar un respaldo legal sólido, combinando experiencia individual y una visión estratégica colectiva para cada caso.
+Nuestra firma brinda respaldo legal sólido con visión estratégica.
 
-</p>
+</div>
+
 
 </section>
-
 
 
 
@@ -376,126 +371,72 @@ Derecho Previsional
 
 
 
-
-<section id="contacto" class="contact">
-
+<section id="contacto">
 
 
 <h2>Contacto</h2>
 
 
-<p>
+<div class="card">
 
 📍 La Plata y San Miguel del Monte
 
-</p>
+</div>
 
 
-<p>
+<div class="card">
 
 💻 Virtual en toda Buenos Aires
 
-</p>
+</div>
 
 
-<p>
+<div class="card">
 
 📞 221 6261845
 
-</p>
+</div>
 
 
+<div class="card">
 
-<p>
+Instagram: @estudiojuridico.gjf
 
-📸 Instagram
-
-<a href="https://instagram.com/estudiojuridico.gjf">
-
-@estudiojuridico.gjf
-
-</a>
-
-</p>
-
+</div>
 
 
 <iframe
 
-src="https://maps.google.com/maps?q=La Plata&t=&z=13&ie=UTF8&iwloc=&output=embed">
+src="https://maps.google.com/maps?q=la%20plata&t=&z=13&ie=UTF8&iwloc=&output=embed"
+
+width="100%"
+
+height="300"
+
+style="border:0; margin-top:20px; border-radius:10px;">
 
 </iframe>
-
 
 
 </section>
 
 
 
-
 <footer>
 
-
 Estudio Jurídico Gigena Fernández & Asoc.
-
-
-<br><br>
-
-
-"Porque hay un solo Dios, y un solo mediador entre Dios y los hombres, Jesucristo hombre."
-
-
-<br>
-
-
-1 Timoteo 2:5
-
-
 
 </footer>
 
 
 
-
-<a href="https://wa.me/5492216261845" class="float">
+<a href="https://wa.me/5492216261845" class="wsp">
 
 💬
 
 </a>
 
 
-
-
-<script>
-
-
-const sections = document.querySelectorAll("section");
-
-
-window.addEventListener("scroll",()=>{
-
-sections.forEach(sec=>{
-
-const top=sec.getBoundingClientRect().top;
-
-if(top<500){
-
-sec.classList.add("visible");
-
-}
-
-})
-
-})
-
-
-</script>
-
-
-
 </body>
 
 </html>
-
-
-

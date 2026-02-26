@@ -15,15 +15,20 @@ margin:0;
 background:black;
 color:white;
 font-family:Montserrat;
+overflow-x:hidden;
 }
 
+/* HEADER */
+
 header{
-background:#4b0d0d;
+background:rgba(75,13,13,0.85);
+backdrop-filter:blur(10px);
 padding:15px;
 text-align:center;
 position:fixed;
 width:100%;
 z-index:999;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
 header a{
@@ -31,18 +36,28 @@ color:white;
 margin:15px;
 text-decoration:none;
 font-size:16px;
+transition:0.4s;
 }
+
+header a:hover{
+color:#d4af37;
+}
+
+
+/* HERO PARALLAX */
 
 .hero{
 
 height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
 url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
 
 background-size:cover;
 background-position:center;
+
+background-attachment:fixed;
 
 display:flex;
 flex-direction:column;
@@ -51,16 +66,20 @@ align-items:center;
 text-align:center;
 padding:20px;
 
+animation:fadeIn 2s;
+
 }
 
-.logo{
-width:140px;
-margin-bottom:20px;
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
 }
+
 
 h1{
 font-family:Playfair Display;
-font-size:40px;
+font-size:42px;
+text-shadow:0 0 20px rgba(0,0,0,0.8);
 }
 
 h2{
@@ -72,6 +91,9 @@ p{
 max-width:700px;
 }
 
+
+/* BOTON */
+
 .btn{
 
 margin-top:15px;
@@ -79,58 +101,98 @@ padding:15px 30px;
 border:none;
 font-size:16px;
 cursor:pointer;
+border-radius:5px;
+
 }
 
 .gold{
-background:#d4af37;
+
+background:linear-gradient(45deg,#d4af37,#f1d47a);
 color:black;
+box-shadow:0 0 20px rgba(212,175,55,0.5);
+
+transition:0.4s;
+
 }
 
+.gold:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* WHATSAPP */
+
 .whatsapp{
+
 background:#25D366;
 color:white;
 position:fixed;
 bottom:20px;
 right:20px;
-padding:15px;
+padding:18px;
 border-radius:50%;
 font-size:20px;
 text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+
 }
+
+
+/* SECCIONES */
 
 .section{
 
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
 
 }
 
+
+/* TARJETAS PREMIUM */
+
 .card{
 
-background:#111;
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(10px);
+
 margin:20px auto;
-padding:20px;
+padding:25px;
+
 border-radius:10px;
+
 max-width:600px;
 
+box-shadow:0 0 30px rgba(0,0,0,0.6);
+
+transition:0.4s;
+
 }
 
-a{
-color:white;
-text-decoration:none;
+.card:hover{
+
+transform:translateY(-5px);
+
 }
+
+
+/* SCROLL ANIMATION */
 
 .fade{
 
 opacity:0;
-transform:translateY(20px);
-transition:1s;
+transform:translateY(30px);
+transition:1.5s;
 
 }
 
 .fade.show{
+
 opacity:1;
 transform:translateY(0);
+
 }
 
 </style>
@@ -138,55 +200,67 @@ transform:translateY(0);
 
 <body>
 
+
 <header>
 
 <a href="#">Inicio</a>
 <a href="#equipo">Equipo</a>
 <a href="#areas">Áreas</a>
+<a href="#opiniones">Opiniones</a>
 <a href="#contacto">Contacto</a>
 
 </header>
 
 
+
 <section class="hero">
 
-<img src="logo.png" class="logo">
 
 <h1>
+
 ESTUDIO JURÍDICO<br>
 GIGENA FERNÁNDEZ<br>
 y Asociados
+
 </h1>
+
 
 <h2>ASESORÍA JURÍDICA INTEGRAL</h2>
 
+
 <p>
 
-Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales. Brindamos soluciones estratégicas basadas en la confianza y el profesionalismo.
+Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales.
 
 </p>
 
+
 <button class="btn gold"
+
 onclick="window.location.href='https://wa.me/5492216261845'">
 
 AGENDAR CONSULTA
 
 </button>
 
+
 </section>
+
+
 
 
 <section id="equipo" class="section fade">
 
 <h2>Nuestro Equipo</h2>
 
-<p>
+<div class="card">
 
-Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdisciplinario de abogados asociados comprometidos con la excelencia. Nuestra firma nace con el objetivo de brindar un respaldo legal sólido, combinando experiencia individual y una visión estratégica colectiva para cada caso.
+Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdisciplinario de abogados asociados comprometidos con la excelencia.
 
-</p>
+</div>
 
 </section>
+
 
 
 
@@ -194,31 +268,56 @@ Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdiscip
 
 <h2>Áreas de Práctica</h2>
 
-<div class="card">
-DERECHO DE FAMILIA
-</div>
+<div class="card">⚖ Derecho de Familia</div>
+
+<div class="card">🏛 Sucesiones</div>
+
+<div class="card">💼 Derecho Laboral</div>
+
+<div class="card">🚗 Accidentes de Tránsito</div>
+
+<div class="card">⚖ Derecho Comercial</div>
+
+<div class="card">👴 Derecho Previsional</div>
+
+</section>
+
+
+
+
+<section id="opiniones" class="section fade">
+
+<h2>Opiniones de Clientes</h2>
 
 <div class="card">
-DERECHO SUCESORIO
+
+"Excelente atención y profesionalismo."<br><br>
+
+— Cliente
+
 </div>
 
-<div class="card">
-DERECHO LABORAL
-</div>
 
 <div class="card">
-ACCIDENTES
+
+"Me resolvieron el problema rápido y con mucha claridad."<br><br>
+
+— Cliente
+
 </div>
 
-<div class="card">
-DERECHO COMERCIAL
-</div>
 
 <div class="card">
-DERECHO PREVISIONAL
+
+"Total confianza desde el primer momento."<br><br>
+
+— Cliente
+
 </div>
 
 </section>
+
+
 
 
 
@@ -270,15 +369,20 @@ DERECHO PREVISIONAL
 
 <div class="card">
 
-<iframe src="https://maps.google.com/maps?q=la%20plata&t=&z=13&ie=UTF8&iwloc=&output=embed"
+<iframe
 
-width="100%" height="250">
+src="https://maps.google.com/maps?q=la%20plata&t=&z=13&ie=UTF8&iwloc=&output=embed"
+
+width="100%"
+
+height="250">
 
 </iframe>
 
 </div>
 
 </section>
+
 
 
 
@@ -308,6 +412,7 @@ class="whatsapp">
 </a>
 
 
+
 <script>
 
 const faders=document.querySelectorAll('.fade');
@@ -333,3 +438,14 @@ el.classList.add('show');
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

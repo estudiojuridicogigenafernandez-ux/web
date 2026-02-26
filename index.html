@@ -1,290 +1,268 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estudio Jurídico Gigena Fernández y Asociados</title>
+<title>Estudio Jurídico Gigena Fernández & Asoc.</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
+font-family:Montserrat;
 background:black;
 color:white;
-font-family:Montserrat;
 }
 
 header{
-background:#4b0d0d;
+background:#5a0f0f;
 padding:15px;
-text-align:center;
 position:fixed;
 width:100%;
 z-index:999;
 }
 
+header nav{
+display:flex;
+justify-content:center;
+gap:40px;
+}
+
 header a{
 color:white;
-margin:15px;
 text-decoration:none;
-font-size:16px;
+font-size:14px;
 }
 
 .hero{
 
-height:100vh;
-
 background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url("https://images.unsplash.com/photo-1589994965851-a8f479c573a9");
 
 background-size:cover;
 background-position:center;
 
+height:100vh;
+
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 padding:20px;
 
 }
 
-.logo{
-width:140px;
-margin-bottom:20px;
+.hero h1{
+
+font-family:Cinzel;
+font-size:42px;
+margin:0;
+
 }
 
-h1{
-font-family:Playfair Display;
-font-size:40px;
-}
+.hero h2{
 
-h2{
 color:#d4af37;
 font-weight:300;
+
 }
 
-p{
-max-width:700px;
+.hero p{
+
+max-width:600px;
+margin:auto;
+
 }
 
 .btn{
 
-margin-top:15px;
-padding:15px 30px;
-border:none;
-font-size:16px;
-cursor:pointer;
-}
-
-.gold{
-background:#d4af37;
+background:linear-gradient(45deg,#d4af37,#b8962e);
 color:black;
-}
-
-.whatsapp{
-background:#25D366;
-color:white;
-position:fixed;
-bottom:20px;
-right:20px;
-padding:15px;
-border-radius:50%;
-font-size:20px;
+padding:15px 30px;
 text-decoration:none;
+display:inline-block;
+margin-top:20px;
+font-weight:600;
+
 }
 
 .section{
 
-padding:60px 20px;
+padding:80px 20px;
+max-width:1000px;
+margin:auto;
+
+}
+
+.titulo{
+
+font-family:Cinzel;
+color:#d4af37;
+margin-bottom:30px;
+
+}
+
+.foto{
+
+width:200px;
+height:200px;
+border-radius:50%;
+border:4px solid #d4af37;
+object-fit:cover;
+
+}
+
+.whatsapp{
+
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+
+}
+
+footer{
+
+background:#111;
+padding:40px;
 text-align:center;
 
 }
 
-.card{
-
-background:#111;
-margin:20px auto;
-padding:20px;
-border-radius:10px;
-max-width:600px;
-
-}
-
-a{
-color:white;
-text-decoration:none;
-}
-
-.fade{
-
-opacity:0;
-transform:translateY(20px);
-transition:1s;
-
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
 </style>
+
 </head>
 
 <body>
 
+
 <header>
 
-<a href="#">Inicio</a>
+<nav>
+
+<a href="#inicio">Inicio</a>
 <a href="#equipo">Equipo</a>
 <a href="#areas">Áreas</a>
 <a href="#contacto">Contacto</a>
 
+</nav>
+
 </header>
 
 
-<section class="hero">
+<section class="hero" id="inicio">
 
-<img src="logo.png" class="logo">
+<div>
 
 <h1>
-ESTUDIO JURÍDICO<br>
-GIGENA FERNÁNDEZ<br>
-y Asociados
+
+ESTUDIO JURÍDICO  
+GIGENA FERNÁNDEZ & ASOC.
+
 </h1>
 
-<h2>ASESORÍA JURÍDICA INTEGRAL</h2>
+<h2>
+
+ASESORÍA JURÍDICA INTEGRAL
+
+</h2>
 
 <p>
 
-Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales. Brindamos soluciones estratégicas basadas en la confianza y el profesionalismo.
+Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales.
 
 </p>
 
-<button class="btn gold"
-onclick="window.location.href='https://wa.me/5492216261845'">
+<a class="btn"
+href="https://wa.me/5492216261845">
 
 AGENDAR CONSULTA
-
-</button>
-
-</section>
-
-
-<section id="equipo" class="section fade">
-
-<h2>Nuestro Equipo</h2>
-
-<p>
-
-Bajo la dirección del Dr. Maximiliano Gigena, conformamos un equipo interdisciplinario de abogados asociados comprometidos con la excelencia. Nuestra firma nace con el objetivo de brindar un respaldo legal sólido, combinando experiencia individual y una visión estratégica colectiva para cada caso.
-
-</p>
-
-</section>
-
-
-
-<section id="areas" class="section fade">
-
-<h2>Áreas de Práctica</h2>
-
-<div class="card">
-DERECHO DE FAMILIA
-</div>
-
-<div class="card">
-DERECHO SUCESORIO
-</div>
-
-<div class="card">
-DERECHO LABORAL
-</div>
-
-<div class="card">
-ACCIDENTES
-</div>
-
-<div class="card">
-DERECHO COMERCIAL
-</div>
-
-<div class="card">
-DERECHO PREVISIONAL
-</div>
-
-</section>
-
-
-
-<section id="contacto" class="section fade">
-
-<h2>Contacto</h2>
-
-
-<div class="card">
-
-📍 La Plata y San Miguel del Monte
-
-</div>
-
-
-<div class="card">
-
-💻 Virtual en toda la Provincia de Buenos Aires
-
-</div>
-
-
-<div class="card">
-
-📞
-
-<a href="tel:2216261845">
-
-221 6261845
 
 </a>
 
 </div>
 
+</section>
 
-<div class="card">
 
-📸
+<section class="section" id="equipo">
 
-<a href="https://instagram.com/estudiojuridico.gjf">
+<h2 class="titulo">Nuestro Equipo</h2>
+
+<img src="maximiliano.jpg" class="foto">
+
+<p>
+
+Bajo la dirección del Dr. Maximiliano Gigena,
+conformamos un equipo interdisciplinario comprometido con la excelencia jurídica.
+
+</p>
+
+</section>
+
+
+<section class="section" id="areas">
+
+<h2 class="titulo">Áreas de Práctica</h2>
+
+<p>
+
+Derecho de Familia  
+Sucesiones  
+Laboral  
+Accidentes  
+Comercial  
+Previsional  
+
+</p>
+
+</section>
+
+
+<section class="section" id="contacto">
+
+<h2 class="titulo">Contacto</h2>
+
+<p>
+
+La Plata y San Miguel del Monte  
+Virtual en toda la Provincia de Buenos Aires  
+
+</p>
+
+<p>
+
+Instagram:
+
+<a href="https://instagram.com/EstudioJuridico.GJF">
 
 @EstudioJuridico.GJF
 
 </a>
 
-</div>
+</p>
 
-
-
-<div class="card">
-
-<iframe src="https://maps.google.com/maps?q=la%20plata&t=&z=13&ie=UTF8&iwloc=&output=embed"
-
-width="100%" height="250">
-
+<iframe src="https://maps.google.com/maps?q=la plata&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300">
 </iframe>
-
-</div>
 
 </section>
 
 
+<footer>
 
-<section class="section fade">
-
-<p style="color:#d4af37">
+<p>
 
 "Porque hay un solo Dios, y un solo mediador entre Dios y los hombres, Jesucristo hombre."
 
@@ -296,40 +274,16 @@ width="100%" height="250">
 
 </p>
 
-</section>
+</footer>
 
 
-
-<a href="https://wa.me/5492216261845"
-class="whatsapp">
+<a href="https://wa.me/5492216261845" class="whatsapp">
 
 💬
 
 </a>
 
 
-<script>
-
-const faders=document.querySelectorAll('.fade');
-
-window.addEventListener('scroll',()=>{
-
-faders.forEach(el=>{
-
-const top=el.getBoundingClientRect().top;
-
-if(top<window.innerHeight){
-
-el.classList.add('show');
-
-}
-
-});
-
-});
-
-</script>
-
-
 </body>
+
 </html>

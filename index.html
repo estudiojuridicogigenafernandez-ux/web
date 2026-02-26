@@ -1,159 +1,313 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Estudio Jurídico Gigena Fernández & Asoc.</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
-body{
-margin:0;
-font-family: Arial, sans-serif;
-background-color:#0a0a0a;
-color:white;
+html{
+scroll-behavior:smooth;
 }
 
-header{
-background-color:#3b0d0d;
-padding:15px;
-text-align:center;
+body{
+
+margin:0;
+background:black;
+color:white;
+font-family:Montserrat;
+
+}
+
+/* NAVBAR PREMIUM */
+
+nav{
+
 position:fixed;
 width:100%;
-top:0;
-z-index:1000;
+background:rgba(90,15,15,0.95);
+padding:18px;
+text-align:center;
+z-index:999;
+
 }
 
-header a{
+nav a{
+
 color:white;
-margin:15px;
+margin:20px;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
+
 }
+
+/* HERO */
 
 .hero{
 
-background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f");
 
 background-size:cover;
 background-position:center;
-padding-top:140px;
-padding-bottom:100px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
 text-align:center;
+
+animation:fade 2s;
+
 }
+
+
+@keyframes fade{
+
+from{opacity:0}
+to{opacity:1}
+
+}
+
 
 .logo{
 
 width:160px;
-border-radius:50%;
-border:4px solid #c6a55c;
 margin-bottom:20px;
 
 }
 
+
 h1{
 
-font-size:32px;
+font-family:Playfair Display;
+font-size:45px;
 
 }
 
-.sub{
 
-color:#c6a55c;
-font-size:20px;
-margin-top:10px;
+.dorado{
 
-}
-
-.texto{
-
-max-width:700px;
-margin:auto;
-padding:20px;
+color:#d4af37;
+font-size:24px;
 
 }
 
-.boton{
 
-background-color:#c6a55c;
-color:black;
-padding:15px;
+.btn{
+
+padding:15px 35px;
+margin:10px;
+border-radius:8px;
 text-decoration:none;
-display:inline-block;
-margin-top:20px;
-font-weight:bold;
-border-radius:6px;
+font-weight:600;
+transition:0.3s;
 
 }
 
-.seccion{
 
-padding:40px;
-background-color:#111;
+.btn:hover{
+
+transform:scale(1.05);
 
 }
+
+
+.wsp{
+
+background:#25D366;
+color:white;
+
+}
+
+
+.turno{
+
+background:#d4af37;
+color:black;
+
+}
+
+
+/* SECCIONES */
+
+section{
+
+padding:80px 20px;
+max-width:1000px;
+margin:auto;
+
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+
+}
+
+section.visible{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
 
 h2{
 
-color:#c6a55c;
+color:#d4af37;
 
 }
+
+
+/* CARDS */
+
+.card{
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+
+padding:20px;
+margin:20px;
+
+border-left:3px solid #d4af37;
+
+}
+
+
+/* CONTACTO */
+
+.contact{
+
+background:#5a0f0f;
+
+}
+
+
+/* MAPA */
+
+iframe{
+
+width:100%;
+height:300px;
+border:0;
+
+}
+
+
+/* FOOTER */
 
 footer{
 
-background-color:#3b0d0d;
-padding:20px;
+background:#5a0f0f;
+padding:30px;
 text-align:center;
 
 }
+
+
+/* BOTON FLOTANTE WHATSAPP */
+
+.float{
+
+position:fixed;
+bottom:25px;
+right:25px;
+
+background:#25D366;
+color:white;
+
+padding:18px;
+
+border-radius:50%;
+
+font-size:22px;
+
+text-decoration:none;
+
+box-shadow:0 0 15px black;
+
+}
+
 
 </style>
 
 </head>
 
+
 <body>
 
 
-<header>
+
+<nav>
 
 <a href="#">Inicio</a>
-<a href="#">Equipo</a>
-<a href="#">Servicios</a>
-<a href="#">Contacto</a>
+<a href="#equipo">Equipo</a>
+<a href="#areas">Servicios</a>
+<a href="#contacto">Contacto</a>
 
-</header>
+</nav>
+
 
 
 <section class="hero">
 
-<img src="LOGO.png" class="logo">
+<img src="logo.png" class="logo">
 
-<h1>ESTUDIO JURÍDICO GIGENA FERNÁNDEZ & ASOC.</h1>
 
-<div class="sub">
+<h1>
+
+ESTUDIO JURÍDICO<br>
+GIGENA FERNÁNDEZ & ASOC.
+
+</h1>
+
+
+<p class="dorado">
+
 ASESORÍA JURÍDICA INTEGRAL
-</div>
 
-<div class="texto">
+</p>
 
-Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales.  
+
+<p>
+
+Excelencia jurídica y compromiso absoluto en la gestión de sus asuntos legales.
 Brindamos soluciones estratégicas basadas en la confianza y el profesionalismo.
 
-</div>
+</p>
 
-<a class="boton"
-href="https://wa.me/5492216261845">
+
+<a href="https://wa.me/5492216261845" class="btn turno">
 
 AGENDAR CONSULTA
 
 </a>
 
+
+<a href="https://wa.me/5492216261845" class="btn wsp">
+
+CONTACTAR
+
+</a>
+
+
+
 </section>
 
 
 
-<section class="seccion">
+
+<section id="equipo">
 
 <h2>Nuestro Equipo</h2>
 
@@ -169,69 +323,178 @@ Nuestra firma nace con el objetivo de brindar un respaldo legal sólido, combina
 
 
 
-<section class="seccion">
+
+<section id="areas">
+
 
 <h2>Áreas de Práctica</h2>
 
-<p>
 
-• Derecho de Familia  
-• Derecho Sucesorio  
-• Derecho Laboral  
-• Accidentes de Tránsito  
-• Derecho Comercial  
-• Concursos y Quiebras  
-• Derecho Previsional  
+<div class="card">
 
-</p>
+Derecho de Familia
+
+</div>
+
+
+<div class="card">
+
+Derecho Sucesorio
+
+</div>
+
+
+<div class="card">
+
+Derecho Laboral
+
+</div>
+
+
+<div class="card">
+
+Accidentes de Tránsito
+
+</div>
+
+
+<div class="card">
+
+Derecho Comercial, Concursos y Quiebras
+
+</div>
+
+
+<div class="card">
+
+Derecho Previsional
+
+</div>
+
 
 </section>
 
 
 
-<section class="seccion">
+
+<section id="contacto" class="contact">
+
+
 
 <h2>Contacto</h2>
 
+
 <p>
 
-📍 Atención Presencial: La Plata y San Miguel del Monte  
-
-💻 Atención Virtual: Toda la Provincia de Buenos Aires  
-
-📱 WhatsApp: 221 6261845  
-
-⏰ Lunes a Viernes de 9 a 18 hs  
+📍 La Plata y San Miguel del Monte
 
 </p>
 
-<a class="boton"
-href="https://wa.me/5492216261845">
 
-CONTACTAR
+<p>
+
+💻 Virtual en toda Buenos Aires
+
+</p>
+
+
+<p>
+
+📞 221 6261845
+
+</p>
+
+
+
+<p>
+
+📸 Instagram
+
+<a href="https://instagram.com/estudiojuridico.gjf">
+
+@estudiojuridico.gjf
 
 </a>
 
+</p>
+
+
+
+<iframe
+
+src="https://maps.google.com/maps?q=La Plata&t=&z=13&ie=UTF8&iwloc=&output=embed">
+
+</iframe>
+
+
+
 </section>
+
 
 
 
 <footer>
 
+
 Estudio Jurídico Gigena Fernández & Asoc.
+
 
 <br><br>
 
+
 "Porque hay un solo Dios, y un solo mediador entre Dios y los hombres, Jesucristo hombre."
+
 
 <br>
 
+
 1 Timoteo 2:5
+
+
 
 </footer>
 
 
+
+
+<a href="https://wa.me/5492216261845" class="float">
+
+💬
+
+</a>
+
+
+
+
+<script>
+
+
+const sections = document.querySelectorAll("section");
+
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+const top=sec.getBoundingClientRect().top;
+
+if(top<500){
+
+sec.classList.add("visible");
+
+}
+
+})
+
+})
+
+
+</script>
+
+
+
 </body>
+
 </html>
 
 

@@ -1,27 +1,368 @@
- <!DOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Estudio Jurídico Gigena & Fernandez</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+margin:0;
+font-family:Arial;
+background:#1e1e1e;
+color:white;
+
+}
+
+/* MENU */
+
+header{
+
+background:#2b1b1b;
+padding:15px;
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
+text-align:center;
+
+}
+
+header a{
+
+color:#d4af37;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+
+}
+
+/* PORTADA */
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+
+url("https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg");
+
+background-size:cover;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.logo{
+
+width:160px;
+
+border-radius:50%;
+
+border:4px solid #d4af37;
+
+background:white;
+
+padding:10px;
+
+}
+
+h1{
+
+font-size:40px;
+margin:20px;
+
+}
+
+.hero p{
+
+color:#d4af37;
+font-size:22px;
+
+}
+
+.sub{
+
+color:white;
+font-size:18px;
+margin-top:10px;
+
+}
+
+/* BOTON */
+
+.boton{
+
+background:#d4af37;
+
+color:black;
+
+padding:15px 35px;
+
+margin-top:25px;
+
+display:inline-block;
+
+text-decoration:none;
+
+border-radius:8px;
+
+font-weight:bold;
+
+font-size:18px;
+
+}
+
+/* SECCIONES */
+
+section{
+
+padding:80px 20px;
+
+text-align:center;
+
+}
+
+.titulo{
+
+color:#d4af37;
+
+font-size:30px;
+
+margin-bottom:20px;
+
+}
+
+/* SERVICIOS */
+
+.servicios{
+
+max-width:600px;
+
+margin:auto;
+
+line-height:35px;
+
+font-size:18px;
+
+}
+
+/* CONTACTO */
+
+.contacto{
+
+font-size:20px;
+line-height:35px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#2b1b1b;
+
+padding:20px;
+
+color:#d4af37;
+
+}
+
+/* BOTON FLOTANTE */
+
+.whatsapp{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#25D366;
+
+color:white;
+
+padding:18px;
+
+border-radius:50%;
+
+font-size:25px;
+
+text-decoration:none;
+
+}
+
+</style>
 
 </head>
 
-<body style="font-family: Arial; text-align: center; padding: 40px;">
+<body>
+
+
+<header>
+
+<a href="#">Inicio</a>
+
+<a href="#nosotros">Nosotros</a>
+
+<a href="#servicios">Servicios</a>
+
+<a href="#contacto">Contacto</a>
+
+</header>
+
+
+<div class="hero">
+
+<img src="LOGO.png" class="logo">
 
 <h1>Estudio Jurídico Gigena & Fernandez</h1>
 
-<p>Atención legal profesional</p>
+<p>Soluciones legales integrales</p>
 
-<p>Consultas por WhatsApp</p>
+<div class="sub">
 
-<a href="https://wa.me/2216261845">
-<button style="padding:15px; font-size:18px;">
-Contactar
-</button>
+Atención presencial en La Plata<br>
+
+Atención virtual en toda la Provincia de Buenos Aires
+
+</div>
+
+<a href="https://wa.me/5492216261845" class="boton">
+
+Contactar por WhatsApp
+
 </a>
+
+</div>
+
+
+<section id="nosotros">
+
+<div class="titulo">Quiénes Somos</div>
+
+<p>
+
+Brindamos asesoramiento jurídico integral, con atención personalizada,
+
+confidencialidad y compromiso profesional.
+
+Nuestro objetivo es defender los derechos de nuestros clientes
+
+y ofrecer soluciones legales eficaces.
+
+</p>
+
+<p>
+
+Atendemos de manera presencial en la ciudad de La Plata
+
+y también brindamos atención virtual en toda la Provincia de Buenos Aires,
+
+facilitando el acceso a nuestros servicios sin importar la ubicación.
+
+</p>
+
+</section>
+
+
+<section id="servicios">
+
+<div class="titulo">Áreas de práctica</div>
+
+<div class="servicios">
+
+Derecho de Familia<br>
+
+Derecho Laboral<br>
+
+Derecho Sucesorio<br>
+
+Derecho Comercial<br>
+
+Concursos y Quiebras<br>
+
+Accidentes de Tránsito
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="titulo">Por qué elegirnos</div>
+
+<p>
+
+Atención personalizada<br>
+
+Compromiso profesional<br>
+
+Confianza y seriedad<br>
+
+Respuestas rápidas<br>
+
+Atención presencial y virtual
+
+</p>
+
+</section>
+
+
+<section id="contacto">
+
+<div class="titulo">Contacto</div>
+
+<div class="contacto">
+
+WhatsApp: 221-626-1845<br>
+
+Atención presencial en La Plata<br>
+
+Atención virtual en toda la Provincia de Buenos Aires
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Estudio Jurídico Gigena & Fernandez<br>
+
+La Plata - Buenos Aires - Argentina
+
+</footer>
+
+
+<a href="https://wa.me/5492216261845" class="whatsapp">
+
+✓
+
+</a>
+
 
 </body>
 

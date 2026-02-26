@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Estudio Jurídico Gigena Fernández y Asoc. </title>
+<title>Estudio Jurídico Gigena Fernández y Asoc.</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-background:black;
-color:white;
+background:white;
+color:black;
 font-family:Montserrat;
 }
 
@@ -21,7 +21,8 @@ font-family:Montserrat;
 /* HEADER */
 
 header{
-background:rgba(75,13,13,0.95);
+
+background:#9b3a3a;
 padding:15px;
 position:fixed;
 width:100%;
@@ -29,24 +30,23 @@ z-index:999;
 display:flex;
 justify-content:space-between;
 align-items:center;
-}
 
+}
 
 .logo{
 
 font-family:Playfair Display;
 font-size:18px;
+color:white;
 margin-left:15px;
 
 }
-
 
 nav{
 
 margin-right:20px;
 
 }
-
 
 nav a{
 
@@ -63,11 +63,11 @@ text-decoration:none;
 
 display:none;
 font-size:30px;
+color:white;
 margin-right:20px;
 cursor:pointer;
 
 }
-
 
 @media(max-width:768px){
 
@@ -75,7 +75,7 @@ nav{
 
 display:none;
 flex-direction:column;
-background:#4b0d0d;
+background:#9b3a3a;
 position:absolute;
 top:60px;
 right:0;
@@ -85,13 +85,11 @@ padding:20px;
 
 }
 
-
 nav.show{
 
 display:flex;
 
 }
-
 
 .menu-toggle{
 
@@ -110,20 +108,11 @@ display:block;
 height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-https://images.unsplash.com/photo-1589829545856-d10d557cf95f');');
-.hero{
 
-height:100vh;
+linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.97)),
 
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9');
+url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9');
 
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-}
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
@@ -142,17 +131,15 @@ h1{
 
 font-family:Playfair Display;
 font-size:45px;
+color:#5a1f1f;
 
 }
-
 
 h2{
 
-color:#d4af37;
-font-weight:300;
+color:#9b3a3a;
 
 }
-
 
 p{
 
@@ -161,20 +148,22 @@ max-width:700px;
 }
 
 
+
 /* BOTON */
 
 .btn{
 
-margin-top:20px;
+margin-top:25px;
 padding:15px 35px;
-background:#25D366;
+background:#9b3a3a;
 color:white;
 border:none;
 font-size:18px;
+border-radius:8px;
 cursor:pointer;
-border-radius:6px;
 
 }
+
 
 
 /* SECCIONES */
@@ -187,18 +176,37 @@ text-align:center;
 }
 
 
+
 /* TARJETAS */
+
+.card{
+
+background:#f4f4f4;
+margin:15px auto;
+padding:25px;
+border-radius:10px;
+max-width:700px;
+
+transition:0.3s;
+
+}
+
 .card:hover{
 
 transform:translateY(-5px);
-box-shadow:0 0 25px rgba(212,175,55,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 
 }
-.card{
 
-background:#111;
-margin:20px auto;
-padding:25px;
+
+
+/* DESPLEGABLE */
+
+details{
+
+background:#f4f4f4;
+margin:10px auto;
+padding:20px;
 border-radius:10px;
 max-width:700px;
 cursor:pointer;
@@ -206,14 +214,16 @@ cursor:pointer;
 }
 
 
-/* LINK BLANCO */
+
+/* LINKS */
 
 a{
 
-color:white;
+color:#9b3a3a;
 text-decoration:none;
 
 }
+
 
 
 /* WHATSAPP */
@@ -224,11 +234,11 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
+color:white;
 padding:18px;
 border-radius:50%;
-text-decoration:none;
-color:white;
 font-size:20px;
+text-decoration:none;
 
 }
 
@@ -267,13 +277,11 @@ GIGENA FERNÁNDEZ Y ASOC.
 
 </nav>
 
-
 </header>
 
 
 
 <section class="hero">
-
 
 <h1>
 
@@ -301,13 +309,12 @@ Excelencia jurídica y compromiso absoluto en la defensa de sus derechos, brinda
 
 onclick="window.location.href='https://wa.me/5492216261845'">
 
-AGENDAR CONSULTA 
+AGENDAR CONSULTA
 
 </button>
 
 
 </section>
-
 
 
 
@@ -327,64 +334,84 @@ Bajo la dirección del Dr. Maximiliano Gigena, nuestro estudio está conformado 
 
 
 
-
 <section id="areas" class="section">
 
 <h2>ÁREAS DE PRACTICA</h2>
 
 
-<details class="card">
+<details>
+
 <summary>⚖ Derecho de Familia</summary>
-Acompañamos a nuestros clientes en divorcios, alimentos, régimen de comunicación,adopciones,filiaciones, cambio de apellido y uniones convivenciales.
+
+Divorcios, alimentos, régimen de comunicación, adopciones, filiaciones y uniones convivenciales.
 
 </details>
 
 
-<details class="card">
+<details>
+
 <summary>🏛 Sucesiones</summary>
-Gestionamos sucesiones garantizando seguridad jurídica y rapidez.
+
+Sucesiones completas con rapidez y seguridad jurídica.
+
 </details>
 
 
-<details class="card">
+<details>
+
 <summary>💼 Derecho Laboral</summary>
-Defensa integral ante despidos, trabajo en negro y conflictos laborales.
+
+Despidos, trabajo en negro e indemnizaciones.
+
 </details>
 
 
-<details class="card">
+<details>
+
 <summary>🚗 Accidentes</summary>
+
 Reclamos indemnizatorios contra aseguradoras.
+
 </details>
 
 
-<details class="card">
+<details>
+
 <summary>⚖ Derecho Comercial</summary>
-Asesoramiento a empresas, contratos y litigios comerciales.
+
+Contratos y asesoramiento empresarial.
+
 </details>
 
 
-<details class="card">
+<details>
+
 <summary>👴 Derecho Previsional</summary>
-Jubilaciones, pensiones y reajustes.
+
+Jubilaciones y pensiones.
+
 </details>
 
 
-<details class="card">
+<details>
+
 <summary>🏥 Amparos de Salud</summary>
+
 Acciones judiciales contra obras sociales.
+
 </details>
 
-<details class="card">
+
+<details>
 
 <summary>📝 Contratos</summary>
 
-Redacción, revisión y negociación de contratos civiles y comerciales.
-
+Redacción y revisión de contratos civiles y comerciales.
 
 </details>
-</section>
 
+
+</section>
 
 
 
@@ -413,8 +440,6 @@ Redacción, revisión y negociación de contratos civiles y comerciales.
 
 
 
-
-
 <section id="contacto" class="section">
 
 <h2>CONTACTO</h2>
@@ -422,7 +447,13 @@ Redacción, revisión y negociación de contratos civiles y comerciales.
 
 <div class="card">
 
-📍 Atención presencial: La Plata y San Miguel del Monte
+📍  
+
+<a href="https://www.google.com/maps/search/?api=1&query=La+Plata+Buenos+Aires" target="_blank">
+
+Atención presencial: La Plata y San Miguel del Monte
+
+</a>
 
 </div>
 
@@ -436,7 +467,7 @@ Redacción, revisión y negociación de contratos civiles y comerciales.
 
 <div class="card">
 
-📞
+📞  
 
 <a href="tel:2216261845">
 
@@ -449,9 +480,9 @@ Redacción, revisión y negociación de contratos civiles y comerciales.
 
 <div class="card">
 
-📸
+📸  
 
-<a href="https://instagram.com/estudiojuridico.gjf">
+<a href="https://instagram.com/estudiojuridico.gjf" target="_blank">
 
 @EstudioJuridico.GJF
 
@@ -465,15 +496,14 @@ Redacción, revisión y negociación de contratos civiles y comerciales.
 
 
 
-
-
 <section class="section">
 
-<p style="color:#d4af37">
+<p style="color:#9b3a3a">
 
 "Porque hay un solo Dios, y un solo mediador entre Dios y los hombres, Jesucristo hombre."
 
 </p>
+
 
 <p>
 
@@ -481,18 +511,18 @@ Redacción, revisión y negociación de contratos civiles y comerciales.
 
 </p>
 
+
 </section>
 
 
 
 
-<a href="https://wa.me/5492216261845"
-class="whatsapp">
+<a href="https://wa.me/5492216261845" class="whatsapp">
 
-Haz click acá 
- 
+⚖
 
 </a>
+
 
 
 

@@ -8,7 +8,7 @@
 
 body{
 margin:0;
-font-family:Arial;
+font-family: Arial, Helvetica, sans-serif;
 background:white;
 }
 
@@ -16,10 +16,11 @@ background:white;
 header{
 background:#7a0000;
 color:white;
-padding:15px 25px;
+padding:18px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+font-size:18px;
 }
 
 .menu{
@@ -29,7 +30,7 @@ cursor:pointer;
 
 /* HERO */
 .hero{
-height:500px;
+height:600px;
 position:relative;
 display:flex;
 flex-direction:column;
@@ -44,70 +45,77 @@ position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
-opacity:0.4;
-filter:blur(2px);
+opacity:0.35;
+filter:blur(3px);
 }
 
-.hero-overlay{
+.overlay{
 position:absolute;
 width:100%;
 height:100%;
 background:black;
-opacity:0.5;
+opacity:0.55;
 }
 
 .hero h1{
-font-size:45px;
+font-size:48px;
 z-index:2;
 }
 
 .hero p{
 z-index:2;
+max-width:700px;
+font-size:20px;
 }
 
-/* BOTON */
 .btn{
 background:#7a0000;
 color:white;
-padding:15px 30px;
+padding:15px 35px;
 border:none;
-border-radius:5px;
+border-radius:6px;
 font-size:18px;
 cursor:pointer;
+margin-top:20px;
 }
 
 /* SECCIONES */
 section{
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
 h2{
 color:#7a0000;
 text-transform:uppercase;
+letter-spacing:2px;
 }
 
 /* AREAS */
 .area{
-border:1px solid #ddd;
-padding:15px;
-margin:15px auto;
 max-width:800px;
+margin:20px auto;
+padding:18px;
+border:1px solid #ddd;
+border-radius:8px;
 cursor:pointer;
+font-size:18px;
 }
 
 .area-content{
 display:none;
-padding-top:10px;
 text-align:left;
+padding-top:10px;
+line-height:1.6;
 }
 
 /* OPINIONES */
 .opinion{
-background:#f4f4f4;
-margin:20px auto;
-padding:20px;
 max-width:800px;
+margin:25px auto;
+padding:20px;
+background:#f4f4f4;
+border-radius:10px;
 }
 
 /* FAQ */
@@ -120,30 +128,31 @@ text-align:left;
 .faq h3{
 background:#7a0000;
 color:white;
-padding:12px;
+padding:15px;
+margin-top:12px;
 cursor:pointer;
-margin-top:10px;
+border-radius:6px;
 }
 
 .faq p{
 display:none;
+padding:15px;
 background:#f4f4f4;
-padding:12px;
 }
 
 /* WHATSAPP */
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 background:#25d366;
-width:70px;
-height:70px;
+width:75px;
+height:75px;
 border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:30px;
+font-size:32px;
 cursor:pointer;
 }
 
@@ -159,16 +168,15 @@ cursor:pointer;
 
 <div class="hero">
 
-<div class="hero-overlay"></div>
+<div class="overlay"></div>
 
-<!-- DIOSA DE LA JUSTICIA DIFUMINADA -->
 <img src="https://images.unsplash.com/photo-1587613865765-7f9c1c5d8f7a">
 
 <h1>⚖️ Estudio Jurídico Gigena Fernández y Asociados</h1>
 
 <p>
-📚 Asesoría Jurídica Integral<br>
-⭐ Excelencia jurídica y compromiso absoluto en la defensa de sus derechos,<br>
+📚 Asesoría Jurídica Integral  
+⭐ Excelencia jurídica y compromiso absoluto en la defensa de sus derechos  
 Brindando soluciones legales estratégicas con profesionalismo.
 </p>
 
@@ -188,109 +196,68 @@ Bajo la dirección del Dr. Maximiliano Gigena, nuestro estudio está conformado 
 </section>
 
 <section>
-
 <h2>📂 Áreas de Práctica</h2>
 
 <div class="area" onclick="toggleArea(this)">
 👨‍👩‍👧 Derecho de Familia
 <div class="area-content">
-• Divorcios  
-• Alimentos  
-• Régimen de comunicación  
-• Adopciones  
-• Filiación  
-• Cambio de apellido  
-• Uniones convivenciales  
-• Violencia familiar  
-• Tutela y curatela  
-• Autorización para viajar
+Divorcios, alimentos, adopciones, filiación, cambio de apellido, uniones convivenciales, violencia familiar, tutela y curatela, autorización para viajar.
 </div>
 </div>
 
 <div class="area" onclick="toggleArea(this)">
 📜 Sucesiones
 <div class="area-content">
-• Sucesiones testamentarias  
-• Declaratorias de herederos  
-• Partición de bienes  
-• Administración de herencias  
-• Tracto abreviado  
+Testamentarias, declaratorias de herederos, partición de bienes, administración de herencias, tracto abreviado.
 </div>
 </div>
 
 <div class="area" onclick="toggleArea(this)">
 💼 Derecho Laboral
 <div class="area-content">
-• Despidos directos e indirectos  
-• Trabajo en negro  
-• Diferencias salariales  
-• Accidentes laborales  
-• ART  
-• Acoso laboral  
+Despidos, trabajo no registrado (en negro), diferencias salariales, accidentes de trabajo, ART, acoso laboral.
 </div>
 </div>
 
 <div class="area" onclick="toggleArea(this)">
 🚗 Accidentes de Tránsito
 <div class="area-content">
-• Reclamos a aseguradoras  
-• Indemnización por daños  
-• Lesiones y secuelas  
-• Daño moral  
-• Lucro cesante  
-• Mediaciones  
+Reclamos a aseguradoras, indemnizaciones, lesiones, incapacidad, daño moral, mediaciones.
 </div>
 </div>
 
 <div class="area" onclick="toggleArea(this)">
 🏢 Derecho Comercial
 <div class="area-content">
-• Contratos comerciales  
-• Constitución de sociedades  
-• SRL, SA y SAS  
-• Cheques, pagarés y facturas  
-• Defensa del consumidor  
-• Marcas y propiedad intelectual  
+Contratos comerciales, sociedades, SRL, SA, SAS, cheques, pagarés, quiebras, marcas y consumidor.
 </div>
 </div>
 
 <div class="area" onclick="toggleArea(this)">
 🏛 Previsional
 <div class="area-content">
-• Jubilaciones y pensiones  
-• Moratorias previsionales  
-• Reajustes de haberes  
-• Juicios contra ANSES  
+Jubilaciones, pensiones, moratorias, reajustes, ANSES, amparos por demora.
 </div>
 </div>
 
 <div class="area" onclick="toggleArea(this)">
 ⚕️ Amparo de Salud
 <div class="area-content">
-• Prepagas y obras sociales  
-• Medicamentos de alto costo  
-• Discapacidad  
-• Fertilización asistida  
-• Geriátricos  
+Prepagas, medicamentos de alto costo, discapacidad, fertilización asistida, geriátricos.
 </div>
 </div>
 
 <div class="area" onclick="toggleArea(this)">
 🏠 Derechos Reales
 <div class="area-content">
-• Usucapión  
-• Escrituración  
-• Desalojos  
-• Reivindicación  
-• Condominios  
-• Regularización de títulos  
+Usucapión, escrituración, desalojos, reivindicación, condominios, títulos de propiedad.
 </div>
 </div>
 
 <div class="area" onclick="toggleArea(this)">
 ✍️ Contratos
 <div class="area-content">
-• Redacción y revisión contractual  
+Redacción y revisión contractual.
 </div>
 </div>
 
@@ -300,18 +267,18 @@ Bajo la dirección del Dr. Maximiliano Gigena, nuestro estudio está conformado 
 <h2>⭐ Opiniones</h2>
 
 <div class="opinion">
-<strong>María González</strong><br>
-"Excelente atención y compromiso. Recomiendo totalmente el estudio."
+<strong>María López</strong><br>
+"Excelente atención y compromiso. Me ayudaron en todo el proceso legal."
 </div>
 
 <div class="opinion">
-<strong>Juan Pérez</strong><br>
-"Profesionalismo absoluto y respuestas rápidas."
+<strong>Juan Martínez</strong><br>
+"Profesionalismo absoluto y respuestas claras."
 </div>
 
 <div class="opinion">
-<strong>Carla Rodríguez</strong><br>
-"Me ayudaron en todo el proceso con mucha dedicación."
+<strong>Carla Gómez</strong><br>
+"Excelente asesoramiento jurídico."
 </div>
 
 </section>
@@ -321,8 +288,8 @@ Bajo la dirección del Dr. Maximiliano Gigena, nuestro estudio está conformado 
 
 <div class="faq">
 
-<h3 onclick="toggleFAQ(this)">💬 ¿Realizan primera consulta gratuita?</h3>
-<p>Sí, brindamos orientación inicial.</p>
+<h3 onclick="toggleFAQ(this)">💬 ¿Realizan consulta gratuita?</h3>
+<p>Sí, ofrecemos orientación inicial.</p>
 
 <h3 onclick="toggleFAQ(this)">💳 ¿Facilidades de pago?</h3>
 <p>Sí, según cada caso.</p>
@@ -337,9 +304,9 @@ Bajo la dirección del Dr. Maximiliano Gigena, nuestro estudio está conformado 
 <h2>📞 Contacto</h2>
 
 <p>
-📍 La Plata<br>
-📍 San Miguel del Monte<br>
-📱 221-626-1845
+📍 La Plata  
+📍 San Miguel del Monte  
+📱 221-626-1845  
 </p>
 
 <p>

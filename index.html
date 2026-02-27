@@ -3,140 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gigena Fernández & Asociados</title>
+    <title>Estudio Jurídico Gigena Fernández & Asociados</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --bordo: #5d101d; --dorado: #b08d57; --gris-claro: #f8f8f8; }
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--gris-claro); color: #333; overflow-x: hidden; }
-        
-        /* Navegación */
-        nav { background: var(--bordo); padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: 400; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; }
+        :root { --bordo: #5d101d; --dorado: #b08d57; --blanco: #ffffff; --gris-f: #f9f9f9; }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--gris-f); color: #333; }
 
-        /* Contenedor Principal Estilo Tarjeta */
-        .main-container { background: white; margin: 15px auto; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); padding-bottom: 25px; }
+        /* Barra de Navegación */
+        .navbar { background: var(--bordo); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; color: white; }
+        .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: bold; }
+        .nav-menu { display: none; } /* Se activa con JS en móvil */
+        .menu-icon { font-size: 1.5rem; cursor: pointer; }
 
-        /* Hero / Título con letra Fina */
-        .hero { padding: 35px 20px; text-align: center; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 2.3em; color: var(--bordo); margin: 0; text-transform: uppercase; }
-        .hero h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.6em; color: var(--dorado); margin: 5px 0 12px; text-transform: uppercase; letter-spacing: 2px; }
-        .hero h2 span { font-style: italic; color: var(--bordo); font-family: serif; font-weight: 300; }
-        
-        .linea { width: 50px; height: 1.5px; background: var(--dorado); margin: 12px auto; }
-        .subtitle { font-style: italic; color: var(--bordo); font-size: 1.05em; margin-bottom: 8px; font-weight: 500; }
-        .description { font-size: 0.95em; color: #555; max-width: 85%; margin: 0 auto 20px; line-height: 1.5; }
+        /* Hero Section con Diosa de la Justicia */
+        .hero { 
+            position: relative; 
+            padding: 80px 20px; 
+            text-align: center; 
+            background: white; 
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop') no-repeat center;
+            background-size: cover;
+            opacity: 0.1; /* Difuminado/Transparencia */
+            z-index: 0;
+        }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 2.5rem; color: var(--bordo); margin: 0; text-transform: uppercase; }
+        .hero h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.8rem; color: var(--dorado); margin: 10px 0; letter-spacing: 2px; }
+        .hero .tagline { font-style: italic; color: var(--bordo); font-weight: 600; margin-bottom: 20px; }
+        .hero .desc { max-width: 700px; margin: 0 auto 30px; line-height: 1.8; font-size: 1rem; }
 
         /* Botón WhatsApp */
-        .btn-contacto { background-color: var(--bordo); color: white; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-weight: 600; display: inline-block; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
+        .btn-ws { background: var(--bordo); color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block; transition: 0.3s; }
+        .btn-ws:hover { background: var(--dorado); transform: translateY(-2px); }
 
-        /* Sección Especialidades (Rayitas Izquierda) */
-        .especialidades-container { padding: 30px 20px; background-color: #fff; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.6em; color: var(--bordo); text-transform: uppercase; text-align: center; margin-bottom: 25px; }
-        
-        .especialidad-item { position: relative; padding-left: 20px; margin-bottom: 12px; }
-        .especialidad-item::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background-color: var(--dorado); }
-        .especialidad-item h4 { font-family: 'Playfair Display', serif; font-size: 1.15em; color: var(--bordo); margin: 0 0 4px; font-weight: 700; }
-        .especialidad-item p { font-size: 0.9em; color: #666; margin: 0; }
+        /* Secciones Generales */
+        section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+        .title-sec { font-family: 'Playfair Display', serif; text-align: center; color: var(--bordo); text-transform: uppercase; margin-bottom: 40px; font-size: 1.8rem; border-bottom: 2px solid var(--dorado); display: inline-block; left: 50%; transform: translateX(-50%); position: relative; }
 
-        /* Sección Nuestro Equipo (Tarjetas) */
-        .equipo-container { padding: 30px 20px; background-color: var(--gris-claro); text-align: center; }
-        .equipo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 800px; margin: 0 auto; }
-        .team-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); width: 280px; border-top: 3px solid var(--dorado); text-align: center; }
-        .team-card h4 { margin: 8px 0 3px; color: var(--bordo); font-family: 'Playfair Display', serif; font-size: 1.25em; font-weight: 700; }
-        .team-card p { font-size: 0.85em; color: #666; margin: 0; }
+        /* Áreas Practicadas (Acordeón) */
+        .area-box { background: white; margin-bottom: 10px; border-radius: 5px; border-left: 5px solid var(--dorado); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .area-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Playfair Display', serif; font-weight: bold; color: var(--bordo); text-transform: uppercase; }
+        .area-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease-out; background: #fff; font-size: 0.95rem; line-height: 1.6; }
+        .area-box.active .area-content { padding: 20px; max-height: 1000px; }
 
-        /* Sección Mapa */
-        .map-section { padding: 30px 20px; background-color: #fff; }
-        .map-wrapper { border-radius: 8px; overflow: hidden; border: 1px solid #ddd; height: 320px; max-width: 900px; margin: 0 auto; }
-        iframe { width: 100%; height: 100%; border: 0; }
+        /* Opiniones */
+        .review-card { background: white; padding: 30px; margin-bottom: 20px; border-radius: 8px; font-style: italic; box-shadow: 0 4px 10px rgba(0,0,0,0.03); text-align: center; }
+        .review-card b { display: block; margin-top: 15px; color: var(--dorado); font-style: normal; }
 
-        /* Footer con Versículo */
-        footer { padding: 25px 20px; text-align: center; font-size: 0.85em; color: #666; background-color: var(--gris-claro); }
-        .insta { display: block; margin: 10px 0; color: var(--dorado); text-decoration: none; font-weight: 600; font-size: 1.05em; }
-        .bible { font-style: italic; color: #999; margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; }
+        /* Mapa e Info de Contacto */
+        .contact-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+        .map-frame { height: 300px; width: 100%; border-radius: 10px; border: 2px solid var(--dorado); }
 
+        /* Botón Flotante WhatsApp */
+        .ws-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000; }
+
+        /* Preguntas Frecuentes */
+        .faq { background: #eee; padding: 10px 15px; border-radius: 20px; position: fixed; bottom: 90px; right: 20px; font-size: 0.8rem; font-weight: bold; color: var(--bordo); cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        /* Footer */
+        footer { background: white; text-align: center; padding: 40px 20px; border-top: 1px solid #ddd; }
+        .bible { font-style: italic; color: #777; margin: 20px 0; font-size: 0.9rem; }
+        .author { font-size: 0.7rem; color: #bbb; text-transform: uppercase; margin-top: 20px; }
+
+        /* Responsive */
         @media (max-width: 600px) {
-            .hero h1 { font-size: 1.9em; }
-            .hero h2 { font-size: 1.35em; }
-            .especialidades-container { padding-left: 10px; padding-right: 10px; }
-            .team-card { width: 100%; max-width: 320px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero h2 { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#areas">Áreas</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#ubicacion">Ubicación</a>
+    <nav class="navbar">
+        <div class="nav-logo">GIGENA FERNÁNDEZ</div>
+        <div class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
     </nav>
 
-    <div class="main-container">
-        <header id="inicio" class="hero">
+    <header class="hero">
+        <div class="hero-content">
             <h1>Estudio Jurídico</h1>
             <h2>Gigena Fernández <span>&</span> Asociados</h2>
-            <div class="linea"></div>
-            <p class="subtitle">Asesoría Jurídica Integral</p>
-            <p class="description">
-                Excelencia jurídica y compromiso absoluto en la defensa de sus derechos, brindando soluciones estratégicas con profesionalismo, confidencialidad y máxima dedicación.
-            </p>
-            <a href="https://wa.me/5492216261845" class="btn-contacto">Agendar Consulta</a>
-        </header>
+            <p class="tagline">ASESORÍA JURÍDICA INTEGRAL</p>
+            <p class="desc">Excelencia Jurídica y compromiso absoluto en la defensa de sus derechos, brindando soluciones legales estratégicas con profesionalismo, confidencialidad y máxima dedicación.</p>
+            <a href="https://wa.me/5492216261845" class="btn-ws">AGENDAR CONSULTA</a>
+        </div>
+    </header>
 
-        <section id="areas" class="especialidades-container">
-            <h3 class="section-title">Especialidades</h3>
-            <div class="especialidad-item">
-                <h4>Derecho Penal</h4>
-                <p>Asesoramiento y defensa profesional en procesos penales y delitos.</p>
-            </div>
-            <div class="especialidad-item">
-                <h4>Derecho de Familia</h4>
-                <p>Divorcios, Alimentos, Cuidado Personal y Regímenes de Comunicación.</p>
-            </div>
-            <div class="especialidad-item">
-                <h4>Derecho Sucesorio</h4>
-                <p>Asesoramiento en Sucesiones Testamentarias e Intestadas.</p>
-            </div>
-        </section>
+    <section id="equipo">
+        <h3 class="title-sec">NUESTRO EQUIPO</h3>
+        <p style="text-align: center; font-weight: 600; color: var(--bordo);">Bajo la dirección del Doctor Maximiliano Gigena</p>
+        <p style="text-align: center;">Nuestro estudio está conformado por profesionales altamente capacitados, comprometidos con la excelencia jurídica y la defensa integral de cada cliente.</p>
+    </section>
 
-        <section id="equipo" class="equipo-container">
-            <h3 class="section-title">Nuestro Equipo</h3>
-            <div class="equipo-grid">
-                <div class="team-card">
-                    <h4>Dr. Fernández</h4>
-                    <p>Abogado Especialista</p>
-                </div>
-                <div class="team-card">
-                    <h4>Dra. Gigena</h4>
-                    <p>Abogada Especialista</p>
-                </div>
-            </div>
-        </section>
+    <section id="areas">
+        <h3 class="title-sec">ÁREAS PRACTICADAS</h3>
 
-        <section id="ubicacion" class="map-section">
-            <h3 class="section-title">Nuestra Ubicación</h3>
-            <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13095.845009139886!2d-57.96205934999999!3d-34.9199341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e633d42e0a29%3A0x89d6e4b85750839e!2sPlaza%20Moreno!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" allowfullscreen="" loading="lazy"></iframe>
+        <div class="area-box">
+            <div class="area-header" onclick="this.parentElement.classList.toggle('active')">
+                <span><i class="fas fa-users"></i> Derecho de Familia</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
-        </section>
+            <div class="area-content">
+                Divorcios, Alimentos, Régimen de comunicación, Adopciones, Filiación, Cambio de apellido, Uniones convivenciales, Liquidación de la sociedad conyugal, Violencia familiar, Compensación económica, Tutela y curatela, Autorización para viajar.
+            </div>
+        </div>
 
-        <footer>
-            <p>Contactanos en nuestras redes sociales</p>
-            <a href="https://www.instagram.com/estudiojuridico.gjf" class="insta" target="_blank">
-                Instagram: @estudiojuridico.gjf
-            </a>
-            <p>Teléfono: 221 626-1845</p>
-            
-            <div class="bible">
-                "Justicia, justicia seguirás, para que vivas y heredes la tierra que Jehová tu Dios te da."<br>
-                — Deuteronomio 16:20
+        <div class="area-box">
+            <div class="area-header" onclick="this.parentElement.classList.toggle('active')">
+                <span><i class="fas fa-book-open"></i> Sucesiones</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
-            <p style="margin-top:20px; font-size: 0.7em; opacity: 0.6;">© 2024 Gigena Fernández & Asociados</p>
-        </footer>
+            <div class="area-content">
+                Sucesiones ab intestato y testamentarias, Declaratorias de herederos, Partición de bienes, Administración de herencias, Inscripción de declaratorias, Tracto abreviado, Reclamo de canon locativo por uso exclusivo del inmueble de la sucesión.
+            </div>
+        </div>
+
+        <div class="area-box">
+            <div class="area-header" onclick="this.parentElement.classList.toggle('active')">
+                <span><i class="fas fa-briefcase"></i> Derecho Laboral</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="area-content">
+                Despidos directos e indirectos, Trabajo no registrado (en negro), Diferencias salariales, Accidentes de trabajo y enfermedades profesionales, ART, Acoso laboral e Intercambio telegráfico.
+            </div>
+        </div>
+
+        <div class="area-box">
+            <div class="area-header" onclick="this.parentElement.classList.toggle('active')">
+                <span><i class="fas fa-car-crash"></i> Accidentes de Tránsito</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="area-content">
+                Reclamos ante compañías de seguros, Máxima indemnización por daños físicos y materiales, Lesiones y secuelas, Incapacidad, Lucro cesante, Daño moral, Mediaciones.
+            </div>
+        </div>
+
+        <div class="area-box">
+            <div class="area-header" onclick="this.parentElement.classList.toggle('active')">
+                <span><i class="fas fa-gavel"></i> Derecho Comercial</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="area-content">
+                Asesoramiento integral a empresas y comercios, Redacción y revisión de contratos, Constitución de sociedades (SRL, SA, SAS), Cobro de títulos ejecutivos (cheque, pagaré, facturas), Concursos y quiebras, Defensa del consumidor, Registro de marcas y Litigios.
+            </div>
+        </div>
+
+        <div class="area-box">
+            <div class="area-header" onclick="this.parentElement.classList.toggle('active')">
+                <span><i class="fas fa-hand-holding-heart"></i> Previsional</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="area-content">
+                Gestión de jubilaciones y pensiones (ordinarias, por invalidez y fallecimiento), Moratorias previsionales, Reconocimiento de servicios, Reajuste de haberes, Recursos administrativos ante ANSES, Juicios por reajustes y Amparos.
+            </div>
+        </div>
+
+        <div class="area-box">
+            <div class="area-header" onclick="this.parentElement.classList.toggle('active')">
+                <span><i class="fas fa-hospital-user"></i> Amparo por Salud</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="area-content">
+                Amparos contra prepagas y obras sociales, Cobertura de medicamentos de alto costo, Prótesis e insumos, Tratamientos de discapacidad y fertilización asistida, Geriátricos y acompañamiento terapéutico.
+            </div>
+        </div>
+
+        <div class="area-box">
+            <div class="area-header" onclick="this.parentElement.classList.toggle('active')">
+                <span><i class="fas fa-home"></i> Derechos Reales</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="area-content">
+                Juicios de Usucapión, Escrituración, Desalojos, Acciones reivindicatorias, Interdictos posesorios, División de condominios y Regularización de títulos.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="title-sec">OPINIONES</h3>
+        <div class="review-card">
+            "Excelente atención y compromiso. Me resolvieron el problema de alimentos de mis hijos de forma rapidísima. Muy profesionales."
+            <b>— María Luz González</b>
+        </div>
+        <div class="review-card">
+            "Profesionalismo absoluto. Llevé mi sucesión con ellos y siempre me mantuvieron informado de todo. Totalmente recomendables."
+            <b>— Carlos Pettinato</b>
+        </div>
+        <div class="review-card">
+            "Atención impecable en mi reclamo contra la ART. Lograron la indemnización que me correspondía sin vueltas."
+            <b>— Roberto García</b>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h3 class="title-sec">CONTACTO</h3>
+        <div class="contact-grid">
+            <div style="text-align: center;">
+                <p><i class="fas fa-phone"></i> 221-626-1845</p>
+                <p><i class="fas fa-map-marker-alt"></i> Atención Presencial: La Plata | San Miguel del Monte</p>
+                <p><i class="fas fa-laptop"></i> Atención Virtual: Toda la Provincia de Buenos Aires</p>
+                <a href="https://www.instagram.com/estudiojuridico.gjf" target="_blank" style="color:var(--bordo); text-decoration:none; font-weight:bold;">
+                    <i class="fab fa-instagram"></i> @estudiojuridico.gjf
+                </a>
+            </div>
+            <div class="map-frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.642938166946!2d-57.9566935!3d-34.9154432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62b1f00e49d%3A0x397a66e60b64d0!2sLa%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bible">
+            "Porque hay un solo Dios, y un solo mediador entre Dios y los hombres, Jesucristo hombre."<br>
+            <b>1 Timoteo 2:5</b>
+        </div>
+        <p class="author">Creado por Alondra Solange Fernández</p>
+    </footer>
+
+    <div class="faq" onclick="alert('Preguntas Frecuentes:\n1. ¿Tienen costo las consultas iniciales?\n2. ¿Atienden casos en CABA?\n3. ¿Cómo envío mi documentación?')">
+        PREGUNTAS FRECUENTES
     </div>
 
+    <a href="https://wa.me/5492216261845" class="ws-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function toggleMenu() {
+            alert("Menú: Inicio, Equipo, Áreas, Opiniones, Contacto");
+        }
+    </script>
 </body>
 </html>
+
 
 

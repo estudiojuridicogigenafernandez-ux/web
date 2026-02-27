@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Estudio Jurídico Gigena Fernández</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:white;
+}
+
+/* HEADER */
+header{
+background:#7a0000;
+color:white;
+padding:15px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu{
+font-size:30px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+height:500px;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0.4;
+filter:blur(2px);
+}
+
+.hero-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:black;
+opacity:0.5;
+}
+
+.hero h1{
+font-size:45px;
+z-index:2;
+}
+
+.hero p{
+z-index:2;
+}
+
+/* BOTON */
+.btn{
+background:#7a0000;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:5px;
+font-size:18px;
+cursor:pointer;
+}
+
+/* SECCIONES */
+section{
+padding:60px 20px;
+text-align:center;
+}
+
+h2{
+color:#7a0000;
+text-transform:uppercase;
+}
+
+/* AREAS */
+.area{
+border:1px solid #ddd;
+padding:15px;
+margin:15px auto;
+max-width:800px;
+cursor:pointer;
+}
+
+.area-content{
+display:none;
+padding-top:10px;
+text-align:left;
+}
+
+/* OPINIONES */
+.opinion{
+background:#f4f4f4;
+margin:20px auto;
+padding:20px;
+max-width:800px;
+}
+
+/* FAQ */
+.faq{
+max-width:800px;
+margin:auto;
+text-align:left;
+}
+
+.faq h3{
+background:#7a0000;
+color:white;
+padding:12px;
+cursor:pointer;
+margin-top:10px;
+}
+
+.faq p{
+display:none;
+background:#f4f4f4;
+padding:12px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div>🏛 Estudio Jurídico Gigena Fernández</div>
+<div class="menu">☰</div>
+</header>
+
+<div class="hero">
+
+<div class="hero-overlay"></div>
+
+<!-- DIOSA DE LA JUSTICIA DIFUMINADA -->
+<img src="https://images.unsplash.com/photo-1587613865765-7f9c1c5d8f7a">
+
+<h1>⚖️ Estudio Jurídico Gigena Fernández y Asociados</h1>
+
+<p>
+📚 Asesoría Jurídica Integral<br>
+⭐ Excelencia jurídica y compromiso absoluto en la defensa de sus derechos,<br>
+Brindando soluciones legales estratégicas con profesionalismo.
+</p>
+
+<button class="btn"
+onclick="window.open('https://wa.me/542216261845')">
+📲 Agendar consulta
+</button>
+
+</div>
+
+<section>
+<h2>👨‍⚖️ Nuestro Equipo</h2>
+
+<p>
+Bajo la dirección del Dr. Maximiliano Gigena, nuestro estudio está conformado por profesionales altamente capacitados.
+</p>
+</section>
+
+<section>
+
+<h2>📂 Áreas de Práctica</h2>
+
+<div class="area" onclick="toggleArea(this)">
+👨‍👩‍👧 Derecho de Familia
+<div class="area-content">
+• Divorcios  
+• Alimentos  
+• Régimen de comunicación  
+• Adopciones  
+• Filiación  
+• Cambio de apellido  
+• Uniones convivenciales  
+• Violencia familiar  
+• Tutela y curatela  
+• Autorización para viajar
+</div>
+</div>
+
+<div class="area" onclick="toggleArea(this)">
+📜 Sucesiones
+<div class="area-content">
+• Sucesiones testamentarias  
+• Declaratorias de herederos  
+• Partición de bienes  
+• Administración de herencias  
+• Tracto abreviado  
+</div>
+</div>
+
+<div class="area" onclick="toggleArea(this)">
+💼 Derecho Laboral
+<div class="area-content">
+• Despidos directos e indirectos  
+• Trabajo en negro  
+• Diferencias salariales  
+• Accidentes laborales  
+• ART  
+• Acoso laboral  
+</div>
+</div>
+
+<div class="area" onclick="toggleArea(this)">
+🚗 Accidentes de Tránsito
+<div class="area-content">
+• Reclamos a aseguradoras  
+• Indemnización por daños  
+• Lesiones y secuelas  
+• Daño moral  
+• Lucro cesante  
+• Mediaciones  
+</div>
+</div>
+
+<div class="area" onclick="toggleArea(this)">
+🏢 Derecho Comercial
+<div class="area-content">
+• Contratos comerciales  
+• Constitución de sociedades  
+• SRL, SA y SAS  
+• Cheques, pagarés y facturas  
+• Defensa del consumidor  
+• Marcas y propiedad intelectual  
+</div>
+</div>
+
+<div class="area" onclick="toggleArea(this)">
+🏛 Previsional
+<div class="area-content">
+• Jubilaciones y pensiones  
+• Moratorias previsionales  
+• Reajustes de haberes  
+• Juicios contra ANSES  
+</div>
+</div>
+
+<div class="area" onclick="toggleArea(this)">
+⚕️ Amparo de Salud
+<div class="area-content">
+• Prepagas y obras sociales  
+• Medicamentos de alto costo  
+• Discapacidad  
+• Fertilización asistida  
+• Geriátricos  
+</div>
+</div>
+
+<div class="area" onclick="toggleArea(this)">
+🏠 Derechos Reales
+<div class="area-content">
+• Usucapión  
+• Escrituración  
+• Desalojos  
+• Reivindicación  
+• Condominios  
+• Regularización de títulos  
+</div>
+</div>
+
+<div class="area" onclick="toggleArea(this)">
+✍️ Contratos
+<div class="area-content">
+• Redacción y revisión contractual  
+</div>
+</div>
+
+</section>
+
+<section>
+<h2>⭐ Opiniones</h2>
+
+<div class="opinion">
+<strong>María González</strong><br>
+"Excelente atención y compromiso. Recomiendo totalmente el estudio."
+</div>
+
+<div class="opinion">
+<strong>Juan Pérez</strong><br>
+"Profesionalismo absoluto y respuestas rápidas."
+</div>
+
+<div class="opinion">
+<strong>Carla Rodríguez</strong><br>
+"Me ayudaron en todo el proceso con mucha dedicación."
+</div>
+
+</section>
+
+<section>
+<h2>❓ Preguntas Frecuentes</h2>
+
+<div class="faq">
+
+<h3 onclick="toggleFAQ(this)">💬 ¿Realizan primera consulta gratuita?</h3>
+<p>Sí, brindamos orientación inicial.</p>
+
+<h3 onclick="toggleFAQ(this)">💳 ¿Facilidades de pago?</h3>
+<p>Sí, según cada caso.</p>
+
+<h3 onclick="toggleFAQ(this)">🌎 ¿Atención virtual?</h3>
+<p>Atendemos en toda la Provincia de Buenos Aires.</p>
+
+</div>
+</section>
+
+<section>
+<h2>📞 Contacto</h2>
+
+<p>
+📍 La Plata<br>
+📍 San Miguel del Monte<br>
+📱 221-626-1845
+</p>
+
+<p>
+📷 Instagram: estudiojuridico.gf
+</p>
+
+<iframe 
+src="https://www.google.com/maps?q=La+Plata+Argentina&output=embed"
+width="100%"
+height="300"></iframe>
+
+</section>
+
+<section>
+<p style="font-style:italic">
+"Porque hay un solo Dios y un solo mediador entre Dios y los hombres, Jesucristo hombre"  
+<br>
+1 Timoteo 2:5
+</p>
+</section>
+
+<div class="whatsapp"
+onclick="window.open('https://wa.me/542216261845')">
+💬
+</div>
+
+<script>
+
+function toggleArea(el){
+let c = el.querySelector(".area-content");
+c.style.display = c.style.display === "block" ? "none" : "block";
+}
+
+function toggleFAQ(el){
+let p = el.nextElementSibling;
+p.style.display = p.style.display === "block" ? "none" : "block";
+}
+
+</script>
+
+</body>
+</html>

@@ -3,45 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio Jurídico Gigena Fernández & Asociados</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Gigena Fernández & Asociados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { margin: 0; font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background-color: #fff; }
+        :root { --bordo: #5d101d; --dorado: #b08d57; --gris-claro: #f8f8f8; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--gris-claro); color: #333; overflow-x: hidden; }
         
         /* Navegación */
-        nav { background: #5d101d; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 400; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; }
+        nav { background: var(--bordo); padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: 400; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Hero / Título Principal */
-        .hero { padding: 60px 20px; text-align: center; background: #ffffff; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 2.6em; color: #5d101d; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
-        .hero h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.8em; color: #b08d57; margin: 10px 0; text-transform: uppercase; letter-spacing: 3px; }
-        .hero h2 span { font-style: italic; color: #5d101d; font-family: serif; }
-        .hero .subtitle { font-style: italic; color: #5d101d; margin-bottom: 25px; font-weight: 500; }
-        .hero .description { max-width: 600px; margin: 0 auto 30px; font-size: 1.05em; color: #444; }
+        /* Contenedor Principal Estilo Tarjeta */
+        .main-container { background: white; margin: 15px auto; max-width: 900px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); padding-bottom: 25px; }
 
-        /* Botón Dorado/Bordó */
-        .btn-ws { background-color: #5d101d; color: white; padding: 15px 35px; text-decoration: none; border-radius: 4px; font-weight: 600; display: inline-block; text-transform: uppercase; font-size: 0.9em; transition: 0.3s; box-shadow: 0 4px 15px rgba(93, 16, 29, 0.2); }
-        .btn-ws:hover { background-color: #b08d57; }
-
-        /* Secciones */
-        .section { padding: 60px 20px; text-align: center; }
-        .section-gray { background-color: #f9f9f9; }
-        .section h3 { font-family: 'Playfair Display', serif; font-size: 2em; color: #5d101d; margin-bottom: 30px; text-transform: uppercase; }
+        /* Hero / Título con letra Fina */
+        .hero { padding: 35px 20px; text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-weight: 300; font-size: 2.3em; color: var(--bordo); margin: 0; text-transform: uppercase; }
+        .hero h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.6em; color: var(--dorado); margin: 5px 0 12px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero h2 span { font-style: italic; color: var(--bordo); font-family: serif; font-weight: 300; }
         
-        .team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: 0 auto; }
-        .team-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); width: 280px; border-top: 3px solid #b08d57; }
-        .team-card h4 { margin: 10px 0 5px; color: #5d101d; font-family: 'Playfair Display', serif; font-size: 1.3em; }
-        .team-card p { font-size: 0.9em; color: #666; margin: 0; }
+        .linea { width: 50px; height: 1.5px; background: var(--dorado); margin: 12px auto; }
+        .subtitle { font-style: italic; color: var(--bordo); font-size: 1.05em; margin-bottom: 8px; font-weight: 500; }
+        .description { font-size: 0.95em; color: #555; max-width: 85%; margin: 0 auto 20px; line-height: 1.5; }
 
-        /* Footer */
-        footer { background: #1a1a1a; color: #fff; padding: 40px 20px; text-align: center; }
-        footer a { color: #b08d57; text-decoration: none; font-weight: 600; }
-        .bible-verse { font-style: italic; color: #888; margin-top: 20px; font-size: 0.9em; border-top: 1px solid #333; padding-top: 20px; }
+        /* Botón WhatsApp */
+        .btn-contacto { background-color: var(--bordo); color: white; padding: 12px 28px; text-decoration: none; border-radius: 4px; font-weight: 600; display: inline-block; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
+
+        /* Sección Especialidades (Rayitas Izquierda) */
+        .especialidades-container { padding: 30px 20px; background-color: #fff; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.6em; color: var(--bordo); text-transform: uppercase; text-align: center; margin-bottom: 25px; }
+        
+        .especialidad-item { position: relative; padding-left: 20px; margin-bottom: 12px; }
+        .especialidad-item::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background-color: var(--dorado); }
+        .especialidad-item h4 { font-family: 'Playfair Display', serif; font-size: 1.15em; color: var(--bordo); margin: 0 0 4px; font-weight: 700; }
+        .especialidad-item p { font-size: 0.9em; color: #666; margin: 0; }
+
+        /* Sección Nuestro Equipo (Tarjetas) */
+        .equipo-container { padding: 30px 20px; background-color: var(--gris-claro); text-align: center; }
+        .equipo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 800px; margin: 0 auto; }
+        .team-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); width: 280px; border-top: 3px solid var(--dorado); text-align: center; }
+        .team-card h4 { margin: 8px 0 3px; color: var(--bordo); font-family: 'Playfair Display', serif; font-size: 1.25em; font-weight: 700; }
+        .team-card p { font-size: 0.85em; color: #666; margin: 0; }
+
+        /* Sección Mapa */
+        .map-section { padding: 30px 20px; background-color: #fff; }
+        .map-wrapper { border-radius: 8px; overflow: hidden; border: 1px solid #ddd; height: 320px; max-width: 900px; margin: 0 auto; }
+        iframe { width: 100%; height: 100%; border: 0; }
+
+        /* Footer con Versículo */
+        footer { padding: 25px 20px; text-align: center; font-size: 0.85em; color: #666; background-color: var(--gris-claro); }
+        .insta { display: block; margin: 10px 0; color: var(--dorado); text-decoration: none; font-weight: 600; font-size: 1.05em; }
+        .bible { font-style: italic; color: #999; margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; }
 
         @media (max-width: 600px) {
-            .hero h1 { font-size: 2em; }
-            .hero h2 { font-size: 1.4em; }
+            .hero h1 { font-size: 1.9em; }
+            .hero h2 { font-size: 1.35em; }
+            .especialidades-container { padding-left: 10px; padding-right: 10px; }
+            .team-card { width: 100%; max-width: 320px; }
         }
     </style>
 </head>
@@ -49,49 +67,76 @@
 
     <nav>
         <a href="#inicio">Inicio</a>
-        <a href="#equipo">Nuestro Equipo</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#areas">Áreas</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#ubicacion">Ubicación</a>
     </nav>
 
-    <header id="inicio" class="hero">
-        <h1>Estudio Jurídico</h1>
-        <h2>Gigena Fernández <span>&</span> Asociados</h2>
-        <div style="width: 50px; height: 1px; background: #b08d57; margin: 20px auto;"></div>
-        <p class="subtitle">Asesoría Jurídica Integral</p>
-        <p class="description">Excelencia jurídica y compromiso absoluto en la defensa de sus derechos, brindando soluciones estratégicas con profesionalismo y dedicación.</p>
-        <a href="https://wa.me/5492216261845" class="btn-ws">Agendar Consulta</a>
-    </header>
+    <div class="main-container">
+        <header id="inicio" class="hero">
+            <h1>Estudio Jurídico</h1>
+            <h2>Gigena Fernández <span>&</span> Asociados</h2>
+            <div class="linea"></div>
+            <p class="subtitle">Asesoría Jurídica Integral</p>
+            <p class="description">
+                Excelencia jurídica y compromiso absoluto en la defensa de sus derechos, brindando soluciones estratégicas con profesionalismo, confidencialidad y máxima dedicación.
+            </p>
+            <a href="https://wa.me/5492216261845" class="btn-contacto">Agendar Consulta</a>
+        </header>
 
-    <section id="equipo" class="section section-gray">
-        <h3>Nuestro Equipo</h3>
-        <div class="team-grid">
-            <div class="team-card">
-                <h4>Dra. Gigena</h4>
-                <p>Abogada Especialista</p>
+        <section id="areas" class="especialidades-container">
+            <h3 class="section-title">Especialidades</h3>
+            <div class="especialidad-item">
+                <h4>Derecho Penal</h4>
+                <p>Asesoramiento y defensa profesional en procesos penales y delitos.</p>
             </div>
-            <div class="team-card">
-                <h4>Dr. Fernández</h4>
-                <p>Abogado Especialista</p>
+            <div class="especialidad-item">
+                <h4>Derecho de Familia</h4>
+                <p>Divorcios, Alimentos, Cuidado Personal y Regímenes de Comunicación.</p>
             </div>
-        </div>
-    </section>
+            <div class="especialidad-item">
+                <h4>Derecho Sucesorio</h4>
+                <p>Asesoramiento en Sucesiones Testamentarias e Intestadas.</p>
+            </div>
+        </section>
 
-    <section id="contacto" class="section">
-        <h3>Contacto</h3>
-        <p>Estamos para asesorarlo. Contáctenos a través de nuestras redes o WhatsApp.</p>
-        <p style="margin-top: 20px;">
-            <strong>Instagram:</strong> <a href="https://www.instagram.com/estudiojuridico.gjf" target="_blank" style="color: #5d101d;">@estudiojuridico.gjf</a><br>
-            <strong>Teléfono:</strong> +54 9 221 626-1845
-        </p>
-    </section>
+        <section id="equipo" class="equipo-container">
+            <h3 class="section-title">Nuestro Equipo</h3>
+            <div class="equipo-grid">
+                <div class="team-card">
+                    <h4>Dr. Fernández</h4>
+                    <p>Abogado Especialista</p>
+                </div>
+                <div class="team-card">
+                    <h4>Dra. Gigena</h4>
+                    <p>Abogada Especialista</p>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2024 Estudio Jurídico Gigena Fernández & Asociados</p>
-        <div class="bible-verse">
-            "Justicia, justicia seguirás, para que vivas y heredes la tierra que Jehová tu Dios te da." <br>— Deuteronomio 16:20
-        </div>
-    </footer>
+        <section id="ubicacion" class="map-section">
+            <h3 class="section-title">Nuestra Ubicación</h3>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13095.845009139886!2d-57.96205934999999!3d-34.9199341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e633d42e0a29%3A0x89d6e4b85750839e!2sPlaza%20Moreno!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <footer>
+            <p>Contactanos en nuestras redes sociales</p>
+            <a href="https://www.instagram.com/estudiojuridico.gjf" class="insta" target="_blank">
+                Instagram: @estudiojuridico.gjf
+            </a>
+            <p>Teléfono: 221 626-1845</p>
+            
+            <div class="bible">
+                "Justicia, justicia seguirás, para que vivas y heredes la tierra que Jehová tu Dios te da."<br>
+                — Deuteronomio 16:20
+            </div>
+            <p style="margin-top:20px; font-size: 0.7em; opacity: 0.6;">© 2024 Gigena Fernández & Asociados</p>
+        </footer>
+    </div>
 
 </body>
 </html>
+
 

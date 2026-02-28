@@ -274,7 +274,17 @@
 
     <script>
         function toggleMenu() {
-            alert("Menú: Inicio, Equipo, Áreas, Opiniones, Contacto");
+            const botonMenu = document.querySelector('.nombre-de-tu-clase-de-menu'); // Cambia esto por la clase de tu botón
+const menu = document.getElementById('menu-desplegable');
+
+botonMenu.addEventListener('click', () => {
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+});
+
         }
     </script>
 </body>

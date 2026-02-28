@@ -248,7 +248,23 @@
         <p class="author">Creado por Alondra Solange Fernández</p>
     </footer>
 
-    <div class="faq" onclick="alert('Preguntas Frecuentes:\n1. ¿Tienen costo las consultas iniciales?\n2. ¿Atienden casos en CABA?\n3. ¿Cómo envío mi documentación?')">
+<div class="faq" onclick="document.getElementById('modalFaq').style.display='flex'" style="cursor:pointer;">
+    PREGUNTAS FRECUENTES
+</div>
+
+<div id="modalFaq" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:#fdfaf6; padding:20px; border-radius:10px; border:2px solid #d4af37; width:80%; max-width:400px; position:relative; font-family:sans-serif; text-align:left;">
+        <span onclick="document.getElementById('modalFaq').style.display='none'" style="position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer; color:#4A0E0E;">&times;</span>
+        <h3 style="color:#4A0E0E; border-bottom:1px solid #d4af37; padding-bottom:10px; margin-top:0;">Preguntas Frecuentes</h3>
+        <p style="margin:10px 0 5px 0; font-weight:bold; color:#4A0E0E;">¿Qué horarios tienen?</p>
+        <p style="margin:0 0 15px 0; color:#333;">Lunes a viernes de 9 a 18 hs.</p>
+        <p style="margin:10px 0 5px 0; font-weight:bold; color:#4A0E0E;">¿Brindan asesoramiento virtual?</p>
+        <p style="margin:0 0 15px 0; color:#333;">Sí, brindamos asesoría jurídica integral de forma virtual.</p>
+        <p style="margin:10px 0 5px 0; font-weight:bold; color:#4A0E0E;">¿Cómo puedo iniciar mi consulta?</p>
+        <p style="margin:0; color:#333;">Hacé clic en "Agendar Consulta" o escribinos por WhatsApp.</p>
+    </div>
+</div>
+
         PREGUNTAS FRECUENTES
     </div>
 

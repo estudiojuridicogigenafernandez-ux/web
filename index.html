@@ -272,20 +272,20 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
-        function toggleMenu() {
-            const botonMenu = document.querySelector('.nombre-de-tu-clase-de-menu'); // Cambia esto por la clase de tu botón
-const menu = document.getElementById('menu-desplegable');
-
-botonMenu.addEventListener('click', () => {
-    if (menu.style.display === "none") {
-        menu.style.display = "block";
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu-desplegable');
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
     } else {
-        menu.style.display = "none";
+      menu.style.display = "block";
     }
-});
+  }
 
-        }
+  // Esto hace que el botón de arriba active la función
+  document.querySelector('.icono-menu').onclick = toggleMenu;
+</script>
+
     </script>
 </body>
 </html>

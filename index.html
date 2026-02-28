@@ -271,20 +271,24 @@
     <a href="https://wa.me/5492216261845" class="ws-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-
 <script>
+  // 1. Definimos qué tiene que pasar (la función)
   function toggleMenu() {
     const menu = document.getElementById('menu-desplegable');
-    // Si el menú está oculto (o no tiene estilo definido), lo muestra
-    if (menu.style.display === "none" || menu.style.display === "") {
-      menu.style.display = "block";
-    } else {
-      menu.style.display = "none";
+    if (menu) {
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
     }
   }
 
-  // Esto busca tu botón y le dice que al hacer clic ejecute la función
-  document.querySelector('.icono-menu').onclick = toggleMenu;
+  // 2. Le decimos al botón que use esa función al hacer clic
+  const boton = document.querySelector('.icono-menu');
+  if (boton) {
+    boton.onclick = toggleMenu;
+  }
 </script>
 
 

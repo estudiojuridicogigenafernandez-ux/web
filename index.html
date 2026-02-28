@@ -271,28 +271,52 @@
     <a href="https://wa.me/5492216261845" class="ws-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+<style>
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+.menu-desplegable {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 65px;
+  background-color: #f5efe9;
+  border-radius: 8px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.menu-desplegable a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #6b1d1d;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="menu-desplegable">
+  <a href="#quienes">QUIÉNES SOMOS</a>
+  <a href="#servicios">NUESTROS SERVICIOS</a>
+  <a href="#equipo">NUESTRO EQUIPO</a>
+  <a href="#contacto">CONTACTO</a>
+</div>
+
 <script>
-  // 1. Definimos qué tiene que pasar (la función)
-  function toggleMenu() {
-    const menu = document.getElementById('menu-desplegable');
-    if (menu) {
-      if (menu.style.display === "block") {
-        menu.style.display = "none";
-      } else {
-        menu.style.display = "block";
-      }
-    }
-  }
-
-  // 2. Le decimos al botón que use esa función al hacer clic
-  const boton = document.querySelector('.icono-menu');
-  if (boton) {
-    boton.onclick = toggleMenu;
-  }
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
 </script>
-
-
-    </script>
 </body>
 </html>
 

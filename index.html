@@ -272,19 +272,21 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-  <script>
+<script>
   function toggleMenu() {
     const menu = document.getElementById('menu-desplegable');
-    if (menu.style.display === "block") {
-      menu.style.display = "none";
-    } else {
+    // Si el menú está oculto (o no tiene estilo definido), lo muestra
+    if (menu.style.display === "none" || menu.style.display === "") {
       menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
     }
   }
 
-  // Esto hace que el botón de arriba active la función
+  // Esto busca tu botón y le dice que al hacer clic ejecute la función
   document.querySelector('.icono-menu').onclick = toggleMenu;
 </script>
+
 
     </script>
 </body>
